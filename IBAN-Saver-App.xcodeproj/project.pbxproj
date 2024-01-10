@@ -16,8 +16,15 @@
 		3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACC2B4E9349000970CA /* LoginViewController.swift */; };
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
 		3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD02B4EE57C000970CA /* AddIBANModel.swift */; };
-		3C328AD32B4EE5AE000970CA /* addPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */; };
 		3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */; };
+		5DB701292B4F253D0054ADBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */; };
+		5DB7012C2B4F269F0054ADBD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012B2B4F269F0054ADBD /* FirebaseAuth */; };
+		5DB7012E2B4F269F0054ADBD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */; };
+		5DB701302B4F269F0054ADBD /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012F2B4F269F0054ADBD /* FirebaseDatabaseSwift */; };
+		5DB701322B4F269F0054ADBD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701312B4F269F0054ADBD /* FirebaseFirestore */; };
+		5DB701342B4F269F0054ADBD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701332B4F269F0054ADBD /* FirebaseFirestoreSwift */; };
+		5DB701362B4F269F0054ADBD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701352B4F269F0054ADBD /* FirebaseStorage */; };
+		5DB701372B4F27250054ADBD /* addPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +42,7 @@
 		3C328AD02B4EE57C000970CA /* AddIBANModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANModel.swift; sourceTree = "<group>"; };
 		3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewModel.swift; sourceTree = "<group>"; };
 		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
+		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +51,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB701342B4F269F0054ADBD /* FirebaseFirestoreSwift in Frameworks */,
+				5DB701302B4F269F0054ADBD /* FirebaseDatabaseSwift in Frameworks */,
+				5DB701322B4F269F0054ADBD /* FirebaseFirestore in Frameworks */,
+				5DB7012E2B4F269F0054ADBD /* FirebaseDatabase in Frameworks */,
+				5DB7012C2B4F269F0054ADBD /* FirebaseAuth in Frameworks */,
+				5DB701362B4F269F0054ADBD /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +89,7 @@
 				3C328AC32B4E923A000970CA /* Delegates */,
 				3C328AB82B4E91DA000970CA /* Assets.xcassets */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
+				5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */,
 				3C328ABD2B4E91DA000970CA /* Info.plist */,
 			);
 			path = "IBAN-Saver-App";
@@ -141,6 +156,14 @@
 			dependencies = (
 			);
 			name = "IBAN-Saver-App";
+			packageProductDependencies = (
+				5DB7012B2B4F269F0054ADBD /* FirebaseAuth */,
+				5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */,
+				5DB7012F2B4F269F0054ADBD /* FirebaseDatabaseSwift */,
+				5DB701312B4F269F0054ADBD /* FirebaseFirestore */,
+				5DB701332B4F269F0054ADBD /* FirebaseFirestoreSwift */,
+				5DB701352B4F269F0054ADBD /* FirebaseStorage */,
+			);
 			productName = "IBAN-Saver-App";
 			productReference = 3C328AAC2B4E91D9000970CA /* IBAN-Saver-App.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 3C328AA32B4E91D9000970CA;
+			packageReferences = (
+				5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3C328AAD2B4E91D9000970CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,6 +211,7 @@
 			files = (
 				3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */,
 				3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */,
+				5DB701292B4F253D0054ADBD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB701372B4F27250054ADBD /* addPersonViewModel.swift in Sources */,
 				3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */,
 				A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */,
 				3C328AC92B4E9304000970CA /* AddIBANViewController.swift in Sources */,
@@ -204,7 +232,6 @@
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
 				3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */,
 				3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */,
-				3C328AD32B4EE5AE000970CA /* addPersonViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +446,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DB7012B2B4F269F0054ADBD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		5DB7012F2B4F269F0054ADBD /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		5DB701312B4F269F0054ADBD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		5DB701332B4F269F0054ADBD /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		5DB701352B4F269F0054ADBD /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB7012A2B4F269F0054ADBD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C328AA42B4E91D9000970CA /* Project object */;
 }
