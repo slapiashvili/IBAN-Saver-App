@@ -31,25 +31,22 @@ struct LogInView: View {
         }
     }
     
-    
     // MARK: - Header
     private struct HeaderView: View {
         var body: some View {
             VStack (alignment: .leading, spacing: 20) {
                 Text("Welcome back!")
-                    .font(.system(size: 30, weight: .medium))
-                    .foregroundColor(.yellow)
+                    .modifier(HeaderTextStyle())
                 
                 VStack (alignment: .leading, spacing: 4) {
                     Text("We're thrilled to see you again!")
-                        .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .modifier(PrimaryTextStyle())
                     
                     Text("Let's sign you in")
-                        .font(.system(size: 18))
-                        .foregroundColor(.white)
+                        .modifier(PrimaryTextStyle())
+                    
                 }
-            }.padding(.top, 80)
+            }.padding(.top, 100)
         }
     }
     
@@ -59,36 +56,24 @@ struct LogInView: View {
         @State private var passwordInput: String = ""
         
         var body: some View {
-            VStack(alignment: .trailing, spacing: 12) {
-                VStack (spacing: 12) {
-                    TextField("",
-                              text: $emailInput,
-                              prompt: Text("Email or Username")
-                        .foregroundColor(.white.opacity(0.6))
-                    )
-                    .textFieldStyle(CustomTextFieldStyle())
-                    
-                    SecureField("",
-                                text: $passwordInput,
-                                prompt: Text("Password")
-                        .foregroundColor(.white.opacity(0.6))
-                    )
-                    .textFieldStyle(CustomTextFieldStyle())
+            VStack(alignment: .trailing, spacing: 8) {
+                VStack(alignment: .leading, spacing: 16) {
+                    CustomTextFieldView(text: $emailInput, placeholder: "Email or Username", isSecure: false)
+                    CustomTextFieldView(text: $passwordInput, placeholder: "Password", isSecure: true)
                 }
                 Text("Forgot Password?")
-                    .font(.system(size: 16))
-                    .foregroundColor(.white)
+                    .modifier(PrimaryTextStyle())
             }
         }
     }
+    
     
     // MARK: - RegisterButton
     private struct RegisterButtonView: View {
         var body: some View {
             HStack (spacing: 8) {
                 Text("Don't have an account?")
-                    .font(.system(size: 16))
-                    .foregroundColor(.white.opacity(0.6))
+                    .modifier(SecondaryTextStyle())
                 
                 Text("Register")
                     .font(.system(size: 16))
@@ -104,7 +89,7 @@ struct LogInView: View {
             Button("Sign In") {
                 // TO BE DONE: Navigation to List Page
             }
-            .buttonStyle(CustomButtonStyle())
+            .buttonStyle(PrimaryButtonStyle())
             .padding(.bottom, 80)
         }
     }
@@ -114,3 +99,111 @@ struct LogInView: View {
     LogInView()
 }
 
+
+// MARK: - Components
+
+// MARK: - Background
+struct Background: View {
+    var body: some View {
+        Image("background")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+// MARK: - Text Styles
+
+// MARK: - PrimaryText
+struct PrimaryTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16))
+            .foregroundColor(Color.white)
+    }
+}
+
+// MARK: - SecondaryText
+struct SecondaryTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16))
+            .foregroundColor(Color.white)
+            .opacity(0.6)
+    }
+}
+
+// MARK: - HeaderText
+struct HeaderTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 30))
+            .foregroundColor(Color.yellow)
+    }
+}
+
+// MARK: - TextField Styles
+
+// MARK: - TextfieldPlaceholder
+
+struct CustomTextFieldView: View {
+    @Binding var text: String
+    var placeholder: String
+    var isSecure: Bool
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            if isSecure {
+                ZStack(alignment: .leading) {
+                    if text.isEmpty {
+                        Text(placeholder)
+                            .foregroundColor(.white.opacity(0.6))
+                            .padding(.horizontal, 16)
+                    }
+                    SecureField("", text: $text)
+                        .textFieldStyle(CustomTextFieldStyle())
+                }
+            } else {
+                TextField(placeholder, text: $text, prompt: Text(placeholder).foregroundColor(.white.opacity(0.6)))
+                    .textFieldStyle(CustomTextFieldStyle())
+            }
+        }
+    }
+}
+
+// MARK: - TextfieldStyle
+struct CustomTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(16)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.white.opacity(0.4), lineWidth: 1)
+            )
+            .foregroundColor(.white)
+    }
+}
+
+// MARK: - Button Styles
+
+// MARK: - MainButtonStyle
+struct PrimaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding(.vertical, 16)
+            .frame(minWidth: 0, maxWidth: 248)
+            .background(Color.yellow)
+            .foregroundColor(.black)
+            .font(.system(size: 16, weight: .bold))
+            .cornerRadius(16)
+    }
+}
+
+struct SecondaryButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .imageScale(.large)
+            .frame(width: 20, height: 20)
+            .foregroundColor(Color.white.opacity(0.6))
+    }
+}
