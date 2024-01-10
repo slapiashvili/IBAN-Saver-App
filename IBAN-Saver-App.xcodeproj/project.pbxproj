@@ -16,6 +16,7 @@
 		3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACC2B4E9349000970CA /* LoginViewController.swift */; };
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
+		A9974C6E2B4EFF3D006DAC5D /* ComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6D2B4EFF3D006DAC5D /* ComponentsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3C328ACC2B4E9349000970CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		A9974C6D2B4EFF3D006DAC5D /* ComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				3C328ACC2B4E9349000970CA /* LoginViewController.swift */,
 				A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */,
+				A9974C6D2B4EFF3D006DAC5D /* ComponentsView.swift */,
 			);
 			path = "Login Page";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9974C6E2B4EFF3D006DAC5D /* ComponentsView.swift in Sources */,
 				3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */,
 				A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */,
 				3C328AC92B4E9304000970CA /* AddIBANViewController.swift in Sources */,

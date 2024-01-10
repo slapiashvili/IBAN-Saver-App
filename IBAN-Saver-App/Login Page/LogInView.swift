@@ -15,6 +15,7 @@ struct LogInView: View {
         }
     }
     
+    // MARK: - Content
     private struct ContentView: View {
         var body: some View {
             VStack {
@@ -30,6 +31,8 @@ struct LogInView: View {
         }
     }
     
+    
+    // MARK: - Header
     private struct HeaderView: View {
         var body: some View {
             VStack (alignment: .leading, spacing: 20) {
@@ -50,6 +53,7 @@ struct LogInView: View {
         }
     }
     
+    // MARK: - Textfield
     private struct TextFieldView: View {
         @State private var emailInput: String = ""
         @State private var passwordInput: String = ""
@@ -78,6 +82,7 @@ struct LogInView: View {
         }
     }
     
+    // MARK: - RegisterButton
     private struct RegisterButtonView: View {
         var body: some View {
             HStack (spacing: 8) {
@@ -88,14 +93,16 @@ struct LogInView: View {
                 Text("Register")
                     .font(.system(size: 16))
                     .foregroundColor(.white)
+                // TO BE DONE: Navigation to Register
             } .padding(.bottom, 12)
         }
     }
-        
+    
+    // MARK: - SignInButton
     private struct SignInButtonView: View {
         var body: some View {
             Button("Sign In") {
-                // TO BE DONE
+                // TO BE DONE: Navigation to List Page
             }
             .buttonStyle(CustomButtonStyle())
             .padding(.bottom, 80)
@@ -105,40 +112,5 @@ struct LogInView: View {
 
 #Preview {
     LogInView()
-}
-
-//MARK: - Components
-
-struct Background: View {
-    var body: some View {
-        Image("background")
-            .resizable()
-            .scaledToFill()
-            .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct CustomTextFieldStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(16)
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white.opacity(0.4), lineWidth: 1)
-            )
-            .foregroundColor(.white)
-    }
-}
-
-struct CustomButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .padding(.vertical, 16)
-            .frame(minWidth: 0, maxWidth: 248)
-            .background(Color.yellow)
-            .foregroundColor(.black)
-            .font(.system(size: 16, weight: .bold))
-            .cornerRadius(16)
-    }
 }
 
