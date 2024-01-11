@@ -10,7 +10,7 @@
 		3C1290BB2B4F693A0092F642 /* StartOnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */; };
 		3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */; };
 		3C1290BF2B4F69730092F642 /* EndOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */; };
-		3C1290C62B4F6C9E0092F642 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C52B4F6C9E0092F642 /* ButtonComponent.swift */; };
+		3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C52B4F6C9E0092F642 /* Button.swift */; };
 		3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C82B4F6CD40092F642 /* ColorPalette.swift */; };
 		3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AAF2B4E91D9000970CA /* AppDelegate.swift */; };
 		3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AB12B4E91D9000970CA /* SceneDelegate.swift */; };
@@ -31,13 +31,16 @@
 		5DB701362B4F269F0054ADBD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701352B4F269F0054ADBD /* FirebaseStorage */; };
 		5DB701372B4F27250054ADBD /* addPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
+		A9974C722B50069D006DAC5D /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C712B50069D006DAC5D /* Text.swift */; };
+		A9974C742B5006E0006DAC5D /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */; };
+		A9974C762B50071C006DAC5D /* CustomBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C752B50071C006DAC5D /* CustomBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnBoardingViewModel.swift; sourceTree = "<group>"; };
 		3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueOnboardingViewController.swift; sourceTree = "<group>"; };
 		3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOnboardingViewController.swift; sourceTree = "<group>"; };
-		3C1290C52B4F6C9E0092F642 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		3C1290C52B4F6C9E0092F642 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3C1290C82B4F6CD40092F642 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		3C328AAC2B4E91D9000970CA /* IBAN-Saver-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBAN-Saver-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C328AAF2B4E91D9000970CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +57,9 @@
 		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
 		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		A9974C712B50069D006DAC5D /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		A9974C752B50071C006DAC5D /* CustomBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +136,8 @@
 		3C1290C42B4F6C450092F642 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3C1290C52B4F6C9E0092F642 /* ButtonComponent.swift */,
+				A9974C752B50071C006DAC5D /* CustomBackground.swift */,
+				A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -138,6 +145,8 @@
 		3C1290C72B4F6CBF0092F642 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A9974C712B50069D006DAC5D /* Text.swift */,
+				3C1290C52B4F6C9E0092F642 /* Button.swift */,
 				3C1290C82B4F6CD40092F642 /* ColorPalette.swift */,
 			);
 			path = Extensions;
@@ -305,15 +314,18 @@
 				3C1290BB2B4F693A0092F642 /* StartOnBoardingViewModel.swift in Sources */,
 				3C1290BF2B4F69730092F642 /* EndOnboardingViewController.swift in Sources */,
 				3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */,
+				A9974C742B5006E0006DAC5D /* CustomTextFieldView.swift in Sources */,
 				A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */,
 				3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */,
+				A9974C722B50069D006DAC5D /* Text.swift in Sources */,
 				3C328AC92B4E9304000970CA /* AddIBANViewController.swift in Sources */,
 				3C328ACB2B4E9334000970CA /* IBANListViewController.swift in Sources */,
 				3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */,
 				3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */,
 				3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */,
+				A9974C762B50071C006DAC5D /* CustomBackground.swift in Sources */,
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
-				3C1290C62B4F6C9E0092F642 /* ButtonComponent.swift in Sources */,
+				3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */,
 				3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */,
 				3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */,
 			);
