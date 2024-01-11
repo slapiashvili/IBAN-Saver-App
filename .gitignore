@@ -5,6 +5,7 @@
 ## Standard Ignore
 *.DS_Store
 *.orig
+IBAN-Saver-App/GoogleService-Info.plist
 
 ## Build generated
 DerivedData/
