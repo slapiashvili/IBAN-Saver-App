@@ -16,10 +16,10 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: someScene)
 
         let registrationViewController = RegistrationViewController()
-        let navigationController = UINavigationController(rootViewController: RegistrationViewController())
+        let navigationController = UINavigationController(rootViewController: registrationViewController)
 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
-
 }
+
