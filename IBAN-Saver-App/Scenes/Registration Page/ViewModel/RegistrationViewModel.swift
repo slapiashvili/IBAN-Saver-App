@@ -11,6 +11,7 @@ import FirebaseAuth
 final class RegistrationViewModel: ObservableObject {
     
     // MARK: - Properties
+    
     let welcomeTitle = "Welcome"
     let welcomeText = "We're thrilled to see you!"
     let welcomeActionText = "Let's sign you up"
