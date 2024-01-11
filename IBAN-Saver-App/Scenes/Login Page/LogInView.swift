@@ -36,15 +36,15 @@ struct LogInView: View {
         var body: some View {
             VStack (alignment: .leading, spacing: 20) {
                 Text("Welcome back!")
-                    .headerTextStyle()
+                    .headerTextStyle
                 
                 VStack (alignment: .leading, spacing: 4) {
                     
                     Text("We're thrilled to see you again!")
-                        .primaryTextStyle()
+                        .primaryTextStyle
                     
                     Text("Let's sign you in")
-                        .primaryTextStyle()
+                        .primaryTextStyle
                 }
             }.padding(.top, 100)
         }
@@ -62,7 +62,7 @@ struct LogInView: View {
                     CustomTextFieldView(text: $passwordInput, placeholder: "Password", isSecure: true)
                 }
                 Text("Forgot Password?")
-                .primaryTextStyle()           
+                .primaryTextStyle
             }
         }
     }
@@ -73,7 +73,7 @@ struct LogInView: View {
         var body: some View {
             HStack (spacing: 8) {
                 Text("Don't have an account?")
-                    .secondaryTextStyle()
+                    .secondaryTextStyle
                 
                 Text("Register")
                     .font(.system(size: 16))
@@ -88,7 +88,7 @@ struct LogInView: View {
             Button("Sign In") {
                 // TO BE DONE: Navigation to List Page
             }
-            .primaryButton()
+            .primaryButton
             .padding(.bottom, 80)
         }
     }

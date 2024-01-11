@@ -9,20 +9,20 @@ import SwiftUI
 
 extension Text {
     // MARK: - PrimaryText
-    func primaryTextStyle() -> some View {
+    var primaryTextStyle: some View {
         self
             .font(.system(size: 16))
     }
 
     // MARK: - SecondaryText
-    func secondaryTextStyle() -> some View {
+    var secondaryTextStyle: some View {
         self
             .font(.system(size: 16))
             .opacity(0.6)
     }
 
     // MARK: - HeaderText
-    func headerTextStyle() -> some View {
+    var headerTextStyle: some View {
         self
             .font(.system(size: 30))
             .foregroundColor(Color.ibanHeader)

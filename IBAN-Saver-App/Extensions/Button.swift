@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Button {
     // MARK: - PrimaryButton
-    func primaryButton() -> some View {
+    var primaryButton: some View {
         self
             .padding(.vertical, 16)
             .frame(minWidth: 0, maxWidth: 248)
@@ -20,7 +20,7 @@ extension Button {
     }
     
     // MARK: - SecondaryButton
-    func secondaryButton() -> some View {
+    var secondaryButton: some View {
         self
             .imageScale(.large)
             .frame(width: 20, height: 20)
