@@ -25,8 +25,8 @@ struct LogInView: View {
                         .padding(.top, 60)
                 } .padding(.horizontal, 24)
                 Spacer()
-                RegisterButtonView()
-                SignInButtonView()
+                RegisterButton()
+                SignInButton()
             }
         }
     }
@@ -69,7 +69,7 @@ struct LogInView: View {
     
     
     // MARK: - RegisterButton
-    private struct RegisterButtonView: View {
+    private struct RegisterButton: View {
         var body: some View {
             HStack (spacing: 8) {
                 Text("Don't have an account?")
@@ -83,7 +83,7 @@ struct LogInView: View {
     }
     
     // MARK: - SignInButton
-    private struct SignInButtonView: View {
+    private struct SignInButton: View {
         var body: some View {
             Button("Sign In") {
                 // TO BE DONE: Navigation to List Page
