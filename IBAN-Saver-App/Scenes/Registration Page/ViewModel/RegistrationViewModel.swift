@@ -5,7 +5,7 @@
 //  Created by Davit Natenadze on 11.01.24.
 //
 
-import Foundation
+import SwiftUI
 import FirebaseAuth
 
 final class RegistrationViewModel: ObservableObject {
@@ -15,6 +15,7 @@ final class RegistrationViewModel: ObservableObject {
     let welcomeTitle = "Welcome"
     let welcomeText = "We're thrilled to see you!"
     let welcomeActionText = "Let's sign you up"
+    @Published var isRegistrationSuccessful = false
    
     // MARK: - Methods
     func registerUser(email: String, password: String) {
@@ -24,7 +25,9 @@ final class RegistrationViewModel: ObservableObject {
                 return
             }
             
-            print("Successful registration")
+            withAnimation(.easeIn) {
+                self.isRegistrationSuccessful = true
+            }
         }
     }
     

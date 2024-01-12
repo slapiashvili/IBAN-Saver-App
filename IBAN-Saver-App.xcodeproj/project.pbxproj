@@ -19,6 +19,7 @@
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
 		3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD02B4EE57C000970CA /* AddIBANModel.swift */; };
 		3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */; };
+		5D7599752B515D9100BD49A5 /* SuccessAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */; };
 		5DB7012C2B4F269F0054ADBD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012B2B4F269F0054ADBD /* FirebaseAuth */; };
 		5DB7012E2B4F269F0054ADBD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */; };
 		5DB701302B4F269F0054ADBD /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012F2B4F269F0054ADBD /* FirebaseDatabaseSwift */; };
@@ -59,6 +60,7 @@
 		3C328AD02B4EE57C000970CA /* AddIBANModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANModel.swift; sourceTree = "<group>"; };
 		3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewModel.swift; sourceTree = "<group>"; };
 		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
+		5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAnimationView.swift; sourceTree = "<group>"; };
 		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				5DB701652B5029130054ADBD /* RegTextFieldView.swift */,
 				5DB701672B5029790054ADBD /* Styles.swift */,
 				5DB701692B5032260054ADBD /* TextModifier.swift */,
+				5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */,
 				5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */,
 				A9974C742B5006E0006DAC5D /* CustomTextFieldView.swift in Sources */,
+				5D7599752B515D9100BD49A5 /* SuccessAnimationView.swift in Sources */,
 				A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */,
 				5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */,
 				3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */,
