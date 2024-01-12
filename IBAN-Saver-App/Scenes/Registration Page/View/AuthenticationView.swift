@@ -14,6 +14,9 @@ struct AuthenticationView: View {
     @State private var emailInput: String = ""
     @State private var passwordInput: String = ""
     
+    @State var passwordStatusView = PasswordStatusView()
+    @State var isPasswordCriteriaMet = false
+    
    // MARK: - Body
     var body: some View {
         ZStack {
@@ -44,6 +47,9 @@ private extension AuthenticationView {
                 textFieldStack
             }
             .padding(.horizontal, 24)
+            
+            passwordStatusView
+                .padding(.top)
             
             Spacer()
             
@@ -78,6 +84,15 @@ private extension AuthenticationView {
     var textFieldStack: some View {
         RegTextFieldView(emailInput: $emailInput, passwordInput: $passwordInput)
             .padding(.top, 60)
+            .onChange(of: passwordInput) { newValue in
+                withAnimation {
+                    passwordStatusView.lengthCriteriaView.isCriteriaMet = viewModel.lengthCriteriaMet(newValue)
+                    passwordStatusView.uppercaseCriteriaView.isCriteriaMet = viewModel.uppercaseMet(newValue)
+                    passwordStatusView.lowerCaseCriteriaView.isCriteriaMet = viewModel.lowercaseMet(newValue)
+                    passwordStatusView.digitCriteriaView.isCriteriaMet = viewModel.digitMet(newValue)
+                    passwordStatusView.specialCharacterCriteriaView.isCriteriaMet = viewModel.specialCharMet(newValue)
+                }
+            }
     }
 }
     
@@ -89,7 +104,14 @@ extension AuthenticationView {
         Button(title) {
             viewModel.registerUser(email: emailInput, password: passwordInput)
         }
-        .buttonStyle(PrimaryButtonStyle1())
+        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
+        .frame(height: 44)
+        .frame(maxWidth: .infinity)
+        .background(viewModel.isPasswordCriteriaMet(text: passwordInput) ? Color.yellow : Color.gray)
+        .foregroundColor(.black)
+        .font(.system(size: 16, weight: .bold))
+        .cornerRadius(8)
+        
         .padding(.horizontal)
         .padding(.bottom, 80)
     }
