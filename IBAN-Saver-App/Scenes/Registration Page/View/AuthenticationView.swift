@@ -20,8 +20,9 @@ struct AuthenticationView: View {
         ZStack {
             background
             mainContent
-            if viewModel.isRegistrationSuccessful { successAnimation }
-          
+            if viewModel.isRegistrationSuccessful {
+                successAnimation
+            }
         }
     }
 }
@@ -97,7 +98,7 @@ private extension AuthenticationView {
     
     func updatePasswordCriteriaView(with value: String) {
         withAnimation {
-            passwordStatusView.lengthCriteriaView.isCriteriaMet = viewModel.lengthCriteriaMet(value)
+            passwordStatusView.lengthCriteriaView.isCriteriaMet = viewModel.lengthAndNoSpaceMet(value)
             passwordStatusView.uppercaseCriteriaView.isCriteriaMet = viewModel.uppercaseMet(value)
             passwordStatusView.lowerCaseCriteriaView.isCriteriaMet = viewModel.lowercaseMet(value)
             passwordStatusView.digitCriteriaView.isCriteriaMet = viewModel.digitMet(value)

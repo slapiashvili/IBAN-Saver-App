@@ -32,7 +32,7 @@ final class RegistrationViewModel: ObservableObject {
     }
     
     func isPasswordCriteriaMet(text: String) ->  Bool {
-        lengthCriteriaMet(text) &&
+        lengthAndNoSpaceMet(text) &&
         uppercaseMet(text) &&
         lowercaseMet(text) &&
         digitMet(text) &&

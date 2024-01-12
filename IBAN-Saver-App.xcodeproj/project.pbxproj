@@ -30,7 +30,6 @@
 		5DB7015D2B50036E0054ADBD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */; };
 		5DB7015F2B501B1A0054ADBD /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */; };
 		5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701652B5029130054ADBD /* RegTextFieldView.swift */; };
-		5DB701682B5029790054ADBD /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701672B5029790054ADBD /* Styles.swift */; };
 		5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701692B5032260054ADBD /* TextModifier.swift */; };
 		5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */; };
 		5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */; };
@@ -65,7 +64,6 @@
 		5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DB701652B5029130054ADBD /* RegTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFieldView.swift; sourceTree = "<group>"; };
-		5DB701672B5029790054ADBD /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DB701692B5032260054ADBD /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				5DB701652B5029130054ADBD /* RegTextFieldView.swift */,
-				5DB701672B5029790054ADBD /* Styles.swift */,
 				5DB701692B5032260054ADBD /* TextModifier.swift */,
 				5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */,
 			);
@@ -350,7 +347,6 @@
 				3C328ACB2B4E9334000970CA /* IBANListViewController.swift in Sources */,
 				3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */,
 				A9974C782B506E3E006DAC5D /* OnboardingView.swift in Sources */,
-				5DB701682B5029790054ADBD /* Styles.swift in Sources */,
 				3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */,
 				5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */,
 				A9974C762B50071C006DAC5D /* CustomBackground.swift in Sources */,
