@@ -9,48 +9,51 @@ import UIKit
 import SwiftUI
 
 struct IBANListViewController: View {
+    
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
-    @State private var isShowingDetails = false
-    @State private var selectedUser: User?
-
+    var retriveUser: String
     
+    //MARK: - Body
     var body: some View {
-        VStack {
-            listTitleView
-            listView
+        ZStack {
+            VStack(alignment: .leading, spacing: 55) {
+                Spacer()
+                listTitleView
+                listView
+            }
+            CustomBackground()
         }
-        .sheet(isPresented: $isShowingDetails) {
-            if let user = selectedUser {
-                IBANListDetailView(user: user)
+    }
+    
+    //MARK: - Views
+    private var listView: some View {
+        List{
+            ForEach(viewModel.addedusers, id: \.id) { addeduser in
+                ListRowView(user: addeduser)
             }
         }
     }
     
-    private var listView: some View {
-        
-        List{
-            ForEach(viewModel.users, id: \.id) { user in
-                ListRowView(user: user)
-                    .onTapGesture {
-                        selectedUser = user
-                        isShowingDetails = true
-                    }
-            }
-            
-        }
+    private var textView: some View {
+        Text(retriveUser)
+            .font(.title3)
+            .bold()
+            .lineLimit(1)
+            .padding(.horizontal, 20)
     }
     
     private var listTitleView: some View {
-        Text("IBAN List View")
+        Text("Hello \(retriveUser)")
             .font(.title)
             .bold()
-            .foregroundStyle(.primary)
+            .foregroundStyle(.orange)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 20)
     }
 }
 
+
 #Preview {
-    IBANListViewController()
+    IBANListViewController(retriveUser: "john")
 }

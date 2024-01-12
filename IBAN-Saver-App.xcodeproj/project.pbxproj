@@ -14,6 +14,7 @@
 		39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC52B4EDE97004D7923 /* ButtonComponent.swift */; };
 		39797EC82B4EF386004D7923 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC72B4EF386004D7923 /* Users.swift */; };
 		39797ECA2B4F1B33004D7923 /* IBANListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */; };
+		39D87EB42B515F09005E0C30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39D87EB32B515F09005E0C30 /* GoogleService-Info.plist */; };
 		3C1290BB2B4F693A0092F642 /* StartOnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */; };
 		3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */; };
 		3C1290BF2B4F69730092F642 /* EndOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */; };
@@ -29,7 +30,6 @@
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
 		3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD02B4EE57C000970CA /* AddIBANModel.swift */; };
 		3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */; };
-		5DB701292B4F253D0054ADBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */; };
 		5DB7012C2B4F269F0054ADBD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012B2B4F269F0054ADBD /* FirebaseAuth */; };
 		5DB7012E2B4F269F0054ADBD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */; };
 		5DB701302B4F269F0054ADBD /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012F2B4F269F0054ADBD /* FirebaseDatabaseSwift */; };
@@ -43,7 +43,6 @@
 		5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701652B5029130054ADBD /* RegTextFieldView.swift */; };
 		5DB701682B5029790054ADBD /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701672B5029790054ADBD /* Styles.swift */; };
 		5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701692B5032260054ADBD /* TextModifier.swift */; };
-		5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
 		A9974C722B50069D006DAC5D /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C712B50069D006DAC5D /* Text.swift */; };
 		A9974C742B5006E0006DAC5D /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */; };
@@ -58,6 +57,7 @@
 		39797EC52B4EDE97004D7923 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		39797EC72B4EF386004D7923 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListDetailViewModel.swift; sourceTree = "<group>"; };
+		39D87EB32B515F09005E0C30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnBoardingViewModel.swift; sourceTree = "<group>"; };
 		3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueOnboardingViewController.swift; sourceTree = "<group>"; };
 		3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOnboardingViewController.swift; sourceTree = "<group>"; };
@@ -76,14 +76,12 @@
 		3C328AD02B4EE57C000970CA /* AddIBANModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANModel.swift; sourceTree = "<group>"; };
 		3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewModel.swift; sourceTree = "<group>"; };
 		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
-		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DB701602B501B810054ADBD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5DB701652B5029130054ADBD /* RegTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFieldView.swift; sourceTree = "<group>"; };
 		5DB701672B5029790054ADBD /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DB701692B5032260054ADBD /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
-		5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		A9974C712B50069D006DAC5D /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
@@ -216,8 +214,7 @@
 				3C1290B82B4F68C50092F642 /* Models */,
 				3C1290C72B4F6CBF0092F642 /* Extensions */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
-				5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */,
-				5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */,
+				39D87EB32B515F09005E0C30 /* GoogleService-Info.plist */,
 				3C328ABD2B4E91DA000970CA /* Info.plist */,
 				3C328AB82B4E91DA000970CA /* Assets.xcassets */,
 			);
@@ -380,9 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */,
-				5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */,
+				39D87EB42B515F09005E0C30 /* GoogleService-Info.plist in Resources */,
 				3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */,
-				5DB701292B4F253D0054ADBD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

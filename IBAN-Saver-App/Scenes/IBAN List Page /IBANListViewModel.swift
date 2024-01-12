@@ -8,8 +8,9 @@
 import Foundation
 
 final class IBANListViewModel: ObservableObject {
+    
     //MARK: - Properties
-    var users: [User] = [
+    var addedusers: [User] = [
         User(username: "John", ibans: ["GE21TB243400001001", "GE21TB0313414", "GE21TB133234432"]),
         User(username: "Mariam", ibans: ["GE21TB1210010029", "GE29NB0000000101904917", "GE21T1293900B133"]),
         User(username: "Salome", ibans: ["GE21TB0313414101", "GE21TB0313414", "GE21TB13310010100"]),

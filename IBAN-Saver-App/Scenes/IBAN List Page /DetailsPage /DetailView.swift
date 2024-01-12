@@ -54,7 +54,7 @@ struct DetailView: View {
         }
         .alert(isPresented: $showDeleteConfirmation) {
             Alert(
-                title: Text("Delete Account"),
+                title: Text("Delete IBAN"),
                 message: Text("Are you sure you want to delete this IBAN?"),
                 primaryButton: .destructive(Text("Delete")) {
                     onDeleteAccount()

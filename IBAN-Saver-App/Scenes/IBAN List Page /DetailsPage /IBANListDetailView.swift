@@ -17,8 +17,12 @@ struct IBANListDetailView: View {
     
     //MARK: - Body
     var body: some View {
-        VStack {
-            listView
+        ZStack() {
+            VStack {
+                Spacer()
+                listView
+            }
+            CustomBackground()
         }
     }
     

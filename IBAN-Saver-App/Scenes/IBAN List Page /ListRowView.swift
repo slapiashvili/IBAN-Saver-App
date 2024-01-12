@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListRowView: View {
+    
     //MARK: Properties
     var user: User
     
@@ -19,10 +20,10 @@ struct ListRowView: View {
         .foregroundColor(.black)
     }
     
-    //MARK: Properties    
+    //MARK: Properties
     private var nameInfoView: some View {
         Text(user.username)
-                .font(.title)
+            .font(.title2)
     }
 }
 
