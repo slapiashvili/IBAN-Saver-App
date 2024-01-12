@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C52B4F6C9E0092F642 /* Button.swift */; };
 		3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C82B4F6CD40092F642 /* ColorPalette.swift */; };
+		3C296AA72B51781E00B70AEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C296AA62B51781E00B70AEF /* GoogleService-Info.plist */; };
 		3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AAF2B4E91D9000970CA /* AppDelegate.swift */; };
 		3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AB12B4E91D9000970CA /* SceneDelegate.swift */; };
 		3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C328AB82B4E91DA000970CA /* Assets.xcassets */; };
@@ -31,7 +32,6 @@
 		5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701652B5029130054ADBD /* RegTextFieldView.swift */; };
 		5DB701682B5029790054ADBD /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701672B5029790054ADBD /* Styles.swift */; };
 		5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701692B5032260054ADBD /* TextModifier.swift */; };
-		5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */; };
 		5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */; };
 		5DB701732B5129910054ADBD /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701722B5129910054ADBD /* PasswordStatusView.swift */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
@@ -46,6 +46,7 @@
 /* Begin PBXFileReference section */
 		3C1290C52B4F6C9E0092F642 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3C1290C82B4F6CD40092F642 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		3C296AA62B51781E00B70AEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C328AAC2B4E91D9000970CA /* IBAN-Saver-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBAN-Saver-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C328AAF2B4E91D9000970CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C328AB12B4E91D9000970CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,13 +60,11 @@
 		3C328AD02B4EE57C000970CA /* AddIBANModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANModel.swift; sourceTree = "<group>"; };
 		3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewModel.swift; sourceTree = "<group>"; };
 		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
-		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DB701652B5029130054ADBD /* RegTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFieldView.swift; sourceTree = "<group>"; };
 		5DB701672B5029790054ADBD /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DB701692B5032260054ADBD /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
-		5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 		5DB701722B5129910054ADBD /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -168,8 +167,7 @@
 				3C1290B82B4F68C50092F642 /* Models */,
 				3C1290C72B4F6CBF0092F642 /* Extensions */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
-				5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */,
-				5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */,
+				3C296AA62B51781E00B70AEF /* GoogleService-Info.plist */,
 				3C328ABD2B4E91DA000970CA /* Info.plist */,
 				3C328AB82B4E91DA000970CA /* Assets.xcassets */,
 			);
@@ -321,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */,
-				5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */,
+				3C296AA72B51781E00B70AEF /* GoogleService-Info.plist in Resources */,
 				3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
