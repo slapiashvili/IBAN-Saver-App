@@ -5,42 +5,38 @@
 //  Created by Salome Lapiashvili on 10.01.24.
 //
 
-import UIKit
-import SwiftUI
+import Foundation
 
-//MARK: Model for persons
-class Person {
-    var name: String
-    var surname: String
-    var ibans: [IBAN]
-
-    init(name: String, surname: String, ibans: [IBAN]) {
-        self.name = name
-        self.surname = surname
-        self.ibans = ibans
-    }
-}
-
-//MARK: Dictionary Model for Bank IBANs
-
-class IBAN: ExpressibleByDictionaryLiteral {
-    var ibanDict: [String: String]
-
-    required init(dictionaryLiteral elements: (String, String)...) {
-        ibanDict = Dictionary(uniqueKeysWithValues: elements)
-    }
-
-    init(ibanDict: [String: String]) {
-        self.ibanDict = ibanDict
-    }
-
-    var bankName: String {
-        return ibanDict.values.first ?? ""
-    }
-
-    var ibanNumber: String {
-        return ibanDict.keys.first ?? ""
-    }
-}
+//final class User {
+//    var email: String
+//    var password: String
+//    var ibans: [IBANStruct]
+//    
+//    static var current: User?
+//    
+//    init(name: String, password: String, ibans: [IBANStruct] = []) {
+//        self.email = name
+//        self.password = password
+//        self.ibans = ibans
+//    }
+//}
+// 
+//struct IBANStruct {
+//    var name: String
+//    var surname: String
+//    var ibanNumber: String
+//    var bankName: String
+//}
 
 
+//final class User: Identifiable {
+//    let id: UUID = .init()
+//    
+//    var username: String
+//    var ibans: [String]
+//    
+//    init(username: String, ibans: [String]) {
+//        self.username = username
+//        self.ibans = ibans
+//    }
+//}

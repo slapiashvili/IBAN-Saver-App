@@ -32,6 +32,6 @@ class RegistrationViewController: UIViewController {
 }
 
 
-#Preview {
-    RegistrationViewController()
-}
+//#Preview {
+//    RegistrationViewController()
+//}
