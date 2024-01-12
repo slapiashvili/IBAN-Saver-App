@@ -8,7 +8,9 @@
 import UIKit
 import SwiftUI
 
-struct IBANListViewController: View {
+struct IBANListViewController: ViewControllable {
+    var holder: NavigationStackHolder
+    private let navigationCoordinator: NavigationCoordinator
     
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
@@ -17,10 +19,14 @@ struct IBANListViewController: View {
     //MARK: - Body
     var body: some View {
         ZStack {
-            VStack(alignment: .leading, spacing: 55) {
+            VStack(spacing: 55) {
                 Spacer()
                 listTitleView
                 listView
+                ButtonComponent(buttonTitle: "Add Person", action: {
+                    navigationCoordinator.navigateToAddPerson()
+                })
+                Spacer()
             }
             CustomBackground()
         }
@@ -33,6 +39,7 @@ struct IBANListViewController: View {
                 ListRowView(user: addeduser)
             }
         }
+        
     }
     
     private var textView: some View {
@@ -51,9 +58,9 @@ struct IBANListViewController: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 20)
     }
+    
+    
 }
 
 
-#Preview {
-    IBANListViewController(retriveUser: "john")
-}
+//#Preview {IBANListViewController( retriveUser: "John") }

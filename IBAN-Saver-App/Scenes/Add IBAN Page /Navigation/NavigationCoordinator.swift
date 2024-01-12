@@ -44,11 +44,11 @@ class NavigationCoordinator {
 //        viewController.navigationController?.pushViewController(view.viewController, animated: true)
 //    }
 //    
-//    func navigateToAddPerson() {
-//        guard let viewController = holder.viewController else { return }
-//        let view = AddPersonView(holder: NavigationStackHolder())
-//        viewController.navigationController?.pushViewController(view.viewController, animated: true)
-//    }
+    func navigateToAddPerson() {
+        guard let viewController = holder.viewController else { return }
+        let view = AddPerson(holder: NavigationStackHolder())
+        viewController.navigationController?.pushViewController(view.viewController, animated: true)
+    }
 //    
 //    func navigateToDetails() {
 //        guard let viewController = holder.viewController else { return }
