@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39413F112B4ECA9F007262C0 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39413F102B4ECA9F007262C0 /* ListRowView.swift */; };
+		39413F152B4ED654007262C0 /* IBANListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39413F142B4ED654007262C0 /* IBANListViewModel.swift */; };
+		39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC12B4EDCB2004D7923 /* IBANListDetailView.swift */; };
+		39797EC42B4EDCD6004D7923 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC32B4EDCD6004D7923 /* DetailView.swift */; };
+		39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC52B4EDE97004D7923 /* ButtonComponent.swift */; };
+		39797EC82B4EF386004D7923 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC72B4EF386004D7923 /* Users.swift */; };
+		39797ECA2B4F1B33004D7923 /* IBANListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */; };
+		3C1290BB2B4F693A0092F642 /* StartOnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */; };
+		3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */; };
+		3C1290BF2B4F69730092F642 /* EndOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */; };
 		3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C52B4F6C9E0092F642 /* Button.swift */; };
 		3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C82B4F6CD40092F642 /* ColorPalette.swift */; };
+		3C296AAA2B5178C100B70AEF /* ViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C296AA92B5178C100B70AEF /* ViewWrapper.swift */; };
+		3C296AAC2B5178D500B70AEF /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C296AAB2B5178D500B70AEF /* NavigationCoordinator.swift */; };
+		3C296AAE2B517C2500B70AEF /* AddIBAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C296AAD2B517C2500B70AEF /* AddIBAN.swift */; };
 		3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AAF2B4E91D9000970CA /* AppDelegate.swift */; };
 		3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AB12B4E91D9000970CA /* SceneDelegate.swift */; };
 		3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C328AB82B4E91DA000970CA /* Assets.xcassets */; };
 		3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */; };
-		3C328AC92B4E9304000970CA /* AddIBANViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AC82B4E9304000970CA /* AddIBANViewController.swift */; };
+		3C328AC92B4E9304000970CA /* AddPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AC82B4E9304000970CA /* AddPerson.swift */; };
 		3C328ACB2B4E9334000970CA /* IBANListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACA2B4E9334000970CA /* IBANListViewController.swift */; };
 		3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACC2B4E9349000970CA /* LoginViewController.swift */; };
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
@@ -28,12 +41,10 @@
 		5DB701322B4F269F0054ADBD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701312B4F269F0054ADBD /* FirebaseFirestore */; };
 		5DB701342B4F269F0054ADBD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701332B4F269F0054ADBD /* FirebaseFirestoreSwift */; };
 		5DB701362B4F269F0054ADBD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB701352B4F269F0054ADBD /* FirebaseStorage */; };
-		5DB701372B4F27250054ADBD /* addPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */; };
 		5DB7015D2B50036E0054ADBD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */; };
 		5DB7015F2B501B1A0054ADBD /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */; };
 		5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701652B5029130054ADBD /* RegTextFieldView.swift */; };
 		5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701692B5032260054ADBD /* TextModifier.swift */; };
-		5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */; };
 		5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */; };
 		5DB701732B5129910054ADBD /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701722B5129910054ADBD /* PasswordStatusView.swift */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
@@ -46,15 +57,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39413F102B4ECA9F007262C0 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		39413F142B4ED654007262C0 /* IBANListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListViewModel.swift; sourceTree = "<group>"; };
+		39797EC12B4EDCB2004D7923 /* IBANListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListDetailView.swift; sourceTree = "<group>"; };
+		39797EC32B4EDCD6004D7923 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		39797EC52B4EDE97004D7923 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		39797EC72B4EF386004D7923 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListDetailViewModel.swift; sourceTree = "<group>"; };
+		3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnBoardingViewModel.swift; sourceTree = "<group>"; };
+		3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueOnboardingViewController.swift; sourceTree = "<group>"; };
+		3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOnboardingViewController.swift; sourceTree = "<group>"; };
 		3C1290C52B4F6C9E0092F642 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3C1290C82B4F6CD40092F642 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		3C296AA92B5178C100B70AEF /* ViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWrapper.swift; sourceTree = "<group>"; };
+		3C296AAB2B5178D500B70AEF /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		3C296AAD2B517C2500B70AEF /* AddIBAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBAN.swift; sourceTree = "<group>"; };
 		3C328AAC2B4E91D9000970CA /* IBAN-Saver-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBAN-Saver-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C328AAF2B4E91D9000970CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C328AB12B4E91D9000970CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3C328AB82B4E91DA000970CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C328ABB2B4E91DA000970CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C328ABD2B4E91DA000970CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C328AC82B4E9304000970CA /* AddIBANViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewController.swift; sourceTree = "<group>"; };
+		3C328AC82B4E9304000970CA /* AddPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPerson.swift; sourceTree = "<group>"; };
 		3C328ACA2B4E9334000970CA /* IBANListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListViewController.swift; sourceTree = "<group>"; };
 		3C328ACC2B4E9349000970CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +93,6 @@
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DB701652B5029130054ADBD /* RegTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFieldView.swift; sourceTree = "<group>"; };
 		5DB701692B5032260054ADBD /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
-		5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 		5DB701722B5129910054ADBD /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -98,6 +121,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39797EC02B4EDC81004D7923 /* DetailsPage  */ = {
+			isa = PBXGroup;
+			children = (
+				39797EC12B4EDCB2004D7923 /* IBANListDetailView.swift */,
+				39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */,
+				39797EC32B4EDCD6004D7923 /* DetailView.swift */,
+				39797EC52B4EDE97004D7923 /* ButtonComponent.swift */,
+			);
+			path = "DetailsPage ";
+			sourceTree = "<group>";
+		};
 		3C1290B72B4F67970092F642 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +181,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3C296AA82B5178AC00B70AEF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3C296AA92B5178C100B70AEF /* ViewWrapper.swift */,
+				3C296AAB2B5178D500B70AEF /* NavigationCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		3C328AA32B4E91D9000970CA = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +215,6 @@
 				3C1290B82B4F68C50092F642 /* Models */,
 				3C1290C72B4F6CBF0092F642 /* Extensions */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
-				5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */,
-				5DB7016E2B504C290054ADBD /* GoogleService-Info.plist */,
 				3C328ABD2B4E91DA000970CA /* Info.plist */,
 				3C328AB82B4E91DA000970CA /* Assets.xcassets */,
 			);
@@ -212,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				3C328ACA2B4E9334000970CA /* IBANListViewController.swift */,
+				39413F142B4ED654007262C0 /* IBANListViewModel.swift */,
+				39413F102B4ECA9F007262C0 /* ListRowView.swift */,
+				39797EC02B4EDC81004D7923 /* DetailsPage  */,
+				39797EC72B4EF386004D7923 /* Users.swift */,
 			);
 			path = "IBAN List Page ";
 			sourceTree = "<group>";
@@ -219,9 +264,9 @@
 		3C328AC72B4E92D4000970CA /* Add IBAN Page  */ = {
 			isa = PBXGroup;
 			children = (
-				3C328AC82B4E9304000970CA /* AddIBANViewController.swift */,
-				3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */,
-				3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */,
+				3C328AC82B4E9304000970CA /* AddPerson.swift */,
+				3C296AAD2B517C2500B70AEF /* AddIBAN.swift */,
+				3C296AA82B5178AC00B70AEF /* Navigation */,
 			);
 			path = "Add IBAN Page ";
 			sourceTree = "<group>";
@@ -335,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */,
-				5DB7016F2B504C2A0054ADBD /* GoogleService-Info.plist in Resources */,
 				3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB701372B4F27250054ADBD /* addPersonViewModel.swift in Sources */,
 				5DB7015F2B501B1A0054ADBD /* RegistrationViewModel.swift in Sources */,
 				3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */,
 				5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */,
@@ -358,9 +401,19 @@
 				5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */,
 				3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */,
 				A9974C722B50069D006DAC5D /* Text.swift in Sources */,
-				3C328AC92B4E9304000970CA /* AddIBANViewController.swift in Sources */,
+				3C328AC92B4E9304000970CA /* AddPerson.swift in Sources */,
 				3C328ACB2B4E9334000970CA /* IBANListViewController.swift in Sources */,
+				39797EC42B4EDCD6004D7923 /* DetailView.swift in Sources */,
+				39797EC82B4EF386004D7923 /* Users.swift in Sources */,
+				39413F112B4ECA9F007262C0 /* ListRowView.swift in Sources */,
+				39413F152B4ED654007262C0 /* IBANListViewModel.swift in Sources */,
+				39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */,
 				3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */,
+				3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */,
+				39797ECA2B4F1B33004D7923 /* IBANListDetailViewModel.swift in Sources */,
+				3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */,
+				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
+				39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */,
 				A9974C782B506E3E006DAC5D /* OnboardingView.swift in Sources */,
 				3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */,
 				5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */,
@@ -371,8 +424,11 @@
 				3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */,
 				3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */,
 				A9974C9C2B508625006DAC5D /* OnboardingViewModel.swift in Sources */,
+				3C296AAC2B5178D500B70AEF /* NavigationCoordinator.swift in Sources */,
+				3C296AAE2B517C2500B70AEF /* AddIBAN.swift in Sources */,
 				5DB7015D2B50036E0054ADBD /* AuthenticationView.swift in Sources */,
 				3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */,
+				3C296AAA2B5178C100B70AEF /* ViewWrapper.swift in Sources */,
 				5DB701732B5129910054ADBD /* PasswordStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
