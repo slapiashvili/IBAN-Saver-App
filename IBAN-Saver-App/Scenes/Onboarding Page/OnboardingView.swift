@@ -14,15 +14,12 @@ struct OnboardingView: View {
             CustomBackground()
             VStack {
                 if !viewModel.showMainView {
-                    SkipButton(showMainView: $viewModel.showMainView, viewModel: viewModel)
                     
-                    OnboardingImage(imageName: viewModel.onboardingData[viewModel.currentPage].imageName)
-                        .padding(.top, 24)
+                    ButtonView(viewModel: viewModel)
                     
-                    OnboardingContentView(currentPage: $viewModel.currentPage, onboardingData: viewModel.onboardingData)
+                        .padding(.top, 60)
                     
-                    NextButton(currentPage: $viewModel.currentPage, showMainView: $viewModel.showMainView, viewModel: viewModel)
-                        .padding(.top, 12)
+                    CardView(viewModel: viewModel)
                 }
                 Spacer()
             }
@@ -34,6 +31,33 @@ struct OnboardingView: View {
         }
     }
 }
+
+
+struct ButtonView: View {
+    @ObservedObject var viewModel: OnboardingViewModel
+    
+    var body: some View {
+        HStack {
+            BackButton(currentPage: $viewModel.currentPage, viewModel: viewModel)
+            Spacer()
+            
+            SkipButton(showMainView: $viewModel.showMainView, viewModel: viewModel)
+        }
+    }
+}
+
+struct CardView: View {
+    @ObservedObject var viewModel: OnboardingViewModel
+    
+    var body: some View {
+        OnboardingImage(imageName: viewModel.onboardingData[viewModel.currentPage].imageName)
+        
+        OnboardingContentView(currentPage: $viewModel.currentPage, onboardingData: viewModel.onboardingData)
+        
+        NextButton(currentPage: $viewModel.currentPage, showMainView: $viewModel.showMainView, viewModel: viewModel)
+    }
+}
+
 
 //MARK: - Image
 
@@ -80,7 +104,7 @@ struct SkipButton: View {
     
     var body: some View {
         Button(action: {
-                viewModel.skipButtonTapped()
+            viewModel.skipButtonTapped()
         }) {
             Spacer()
             Text("Skip")
@@ -88,9 +112,25 @@ struct SkipButton: View {
                 .foregroundColor(.gray)
                 .padding(.trailing, 24)
         }
-        .padding(.top, 60)
     }
 }
+
+struct BackButton: View {
+    @Binding var currentPage: Int
+    @ObservedObject var viewModel: OnboardingViewModel
+    
+    var body: some View {
+        Button(action: {
+            viewModel.backBuTtonTapped()
+        }) {
+            Text("Back")
+                .opacity(viewModel.currentPage > 0 ? 1.0 : 0.0)
+                .padding(.leading, 24)
+                .foregroundColor(Color.ibanButton)
+        }
+    }
+}
+
 
 // MARK: - Next Button
 
@@ -104,9 +144,12 @@ struct NextButton: View {
             viewModel.nextButtonTapped()
         }) {
             Text(currentPage < 2 ? "Next" : "Get Started")
+                .padding(.top, 12)
+                .foregroundColor(Color.ibanButton)
         }
     }
 }
+
 
 //MARK: - Preview
 struct OnboardingViewPreviews: PreviewProvider {

@@ -27,4 +27,12 @@ class OnboardingViewModel: ObservableObject {
             }
         }
     }
+    
+    func backBuTtonTapped() {
+            withAnimation {
+                if currentPage > 0 {
+                    currentPage -= 1
+                }
+            }
+        }
 }
