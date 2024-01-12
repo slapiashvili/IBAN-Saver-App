@@ -46,18 +46,3 @@ struct CustomTextFieldStyle1: TextFieldStyle {
             .foregroundColor(.white)
     }
 }
-
-// MARK: - Button Styles
-
-// MARK: - MainButtonStyle
-struct PrimaryButtonStyle1: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .frame(height: 44)
-            .frame(maxWidth: .infinity)
-            .background(Color.yellow)
-            .foregroundColor(.black)
-            .font(.system(size: 16, weight: .bold))
-            .cornerRadius(8)
-    }
-}

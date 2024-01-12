@@ -16,6 +16,7 @@ struct RegTextFieldView: View {
             VStack(alignment: .leading, spacing: 16) {
                 CustomTextFieldView1(text: $emailInput, placeholder: "Email")
                 CustomTextFieldView1(text: $passwordInput, placeholder: "Password", isSecure: true)
+                  
             }
         }
     }

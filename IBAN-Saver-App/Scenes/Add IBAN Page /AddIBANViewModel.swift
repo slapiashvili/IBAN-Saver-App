@@ -8,9 +8,9 @@
 import UIKit
 
 //MARK: still unclear due to no button logic at the moment:
-class AddIBANViewModel {
-    func addIBAN(person: Person, bankName: String, ibanNumber: String) {
-        
-        
-    }
-}
+//class AddIBANViewModel {
+//    func addIBAN(email: Person, bankName: String, ibanNumber: String) {
+//
+//        
+//    }
+//}
