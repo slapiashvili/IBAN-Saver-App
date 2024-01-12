@@ -7,12 +7,10 @@
 
 import Foundation
 
-final class User {
+final class RegUser {
     var email: String
     var username: String
     var ibans: [IBANStruct]
-    
-    static var current: User?
     
     init(name: String, username: String, ibans: [IBANStruct] = []) {
         self.email = name

@@ -14,9 +14,6 @@
 		39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC52B4EDE97004D7923 /* ButtonComponent.swift */; };
 		39797EC82B4EF386004D7923 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC72B4EF386004D7923 /* Users.swift */; };
 		39797ECA2B4F1B33004D7923 /* IBANListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */; };
-		3C1290BB2B4F693A0092F642 /* StartOnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */; };
-		3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */; };
-		3C1290BF2B4F69730092F642 /* EndOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */; };
 		3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C52B4F6C9E0092F642 /* Button.swift */; };
 		3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1290C82B4F6CD40092F642 /* ColorPalette.swift */; };
 		3C296AAA2B5178C100B70AEF /* ViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C296AA92B5178C100B70AEF /* ViewWrapper.swift */; };
@@ -31,9 +28,9 @@
 		3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACC2B4E9349000970CA /* LoginViewController.swift */; };
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
 		3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD02B4EE57C000970CA /* AddIBANModel.swift */; };
-		3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */; };
 		5D35C5C02B5183C0003AFE17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35C5BF2B5183C0003AFE17 /* Constants.swift */; };
 		5D35C5C72B51C6E5003AFE17 /* ApiManagerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */; };
+		5D35C5CA2B51DC8E003AFE17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D35C5C92B51DC8E003AFE17 /* GoogleService-Info.plist */; };
 		5D7599752B515D9100BD49A5 /* SuccessAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */; };
 		5DB7012C2B4F269F0054ADBD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012B2B4F269F0054ADBD /* FirebaseAuth */; };
 		5DB7012E2B4F269F0054ADBD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */; };
@@ -64,9 +61,6 @@
 		39797EC52B4EDE97004D7923 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		39797EC72B4EF386004D7923 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		39797EC92B4F1B33004D7923 /* IBANListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListDetailViewModel.swift; sourceTree = "<group>"; };
-		3C1290BA2B4F693A0092F642 /* StartOnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartOnBoardingViewModel.swift; sourceTree = "<group>"; };
-		3C1290BC2B4F69570092F642 /* ContinueOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueOnboardingViewController.swift; sourceTree = "<group>"; };
-		3C1290BE2B4F69730092F642 /* EndOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOnboardingViewController.swift; sourceTree = "<group>"; };
 		3C1290C52B4F6C9E0092F642 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3C1290C82B4F6CD40092F642 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		3C296AA92B5178C100B70AEF /* ViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWrapper.swift; sourceTree = "<group>"; };
@@ -83,12 +77,10 @@
 		3C328ACC2B4E9349000970CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3C328AD02B4EE57C000970CA /* AddIBANModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANModel.swift; sourceTree = "<group>"; };
-		3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewModel.swift; sourceTree = "<group>"; };
-		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
 		5D35C5BF2B5183C0003AFE17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerr.swift; sourceTree = "<group>"; };
+		5D35C5C92B51DC8E003AFE17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAnimationView.swift; sourceTree = "<group>"; };
-		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DB701652B5029130054ADBD /* RegTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFieldView.swift; sourceTree = "<group>"; };
@@ -215,6 +207,7 @@
 				3C1290B82B4F68C50092F642 /* Models */,
 				3C1290C72B4F6CBF0092F642 /* Extensions */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
+				5D35C5C92B51DC8E003AFE17 /* GoogleService-Info.plist */,
 				3C328ABD2B4E91DA000970CA /* Info.plist */,
 				3C328AB82B4E91DA000970CA /* Assets.xcassets */,
 			);
@@ -381,6 +374,7 @@
 			files = (
 				3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */,
 				3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */,
+				5D35C5CA2B51DC8E003AFE17 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,10 +402,8 @@
 				39413F112B4ECA9F007262C0 /* ListRowView.swift in Sources */,
 				39413F152B4ED654007262C0 /* IBANListViewModel.swift in Sources */,
 				39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */,
-				3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */,
 				3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */,
 				39797ECA2B4F1B33004D7923 /* IBANListDetailViewModel.swift in Sources */,
-				3C1290BD2B4F69570092F642 /* ContinueOnboardingViewController.swift in Sources */,
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
 				39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */,
 				A9974C782B506E3E006DAC5D /* OnboardingView.swift in Sources */,

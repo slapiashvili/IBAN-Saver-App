@@ -52,7 +52,7 @@ class ApiManager {
         }
     }
     
-    static func fetchUserData(withUid uid: String, completion: @escaping (User?) -> Void) {
+    static func fetchUserData(withUid uid: String, completion: @escaping (RegUser?) -> Void) {
         
         REF_USERS.child(uid).observeSingleEvent(of: .value) { snapshot, _  in
             guard let userData = snapshot.value as? [String: Any] else {
@@ -76,7 +76,7 @@ class ApiManager {
                 }
             }
 
-            let user = User(name: email, username: username, ibans: ibans)
+            let user = RegUser(name: email, username: username, ibans: ibans)
             print(user)
             completion(user)
         }
@@ -139,7 +139,7 @@ class ApiManager {
                 }
             }
 
-            let user = User(name: email, username: username, ibans: ibans)
+            let user = RegUser(name: email, username: username, ibans: ibans)
             print(user.email)
             print(user.username)
             print(user.ibans.count)
