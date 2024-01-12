@@ -31,6 +31,10 @@
 		3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACC2B4E9349000970CA /* LoginViewController.swift */; };
 		3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */; };
 		3C328AD12B4EE57C000970CA /* AddIBANModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD02B4EE57C000970CA /* AddIBANModel.swift */; };
+		3C328AD52B4EE5CC000970CA /* AddIBANViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */; };
+		5D35C5C02B5183C0003AFE17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35C5BF2B5183C0003AFE17 /* Constants.swift */; };
+		5D35C5C72B51C6E5003AFE17 /* ApiManagerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */; };
+		5D7599752B515D9100BD49A5 /* SuccessAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */; };
 		5DB7012C2B4F269F0054ADBD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012B2B4F269F0054ADBD /* FirebaseAuth */; };
 		5DB7012E2B4F269F0054ADBD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012D2B4F269F0054ADBD /* FirebaseDatabase */; };
 		5DB701302B4F269F0054ADBD /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB7012F2B4F269F0054ADBD /* FirebaseDatabaseSwift */; };
@@ -40,7 +44,6 @@
 		5DB7015D2B50036E0054ADBD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */; };
 		5DB7015F2B501B1A0054ADBD /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */; };
 		5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701652B5029130054ADBD /* RegTextFieldView.swift */; };
-		5DB701682B5029790054ADBD /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701672B5029790054ADBD /* Styles.swift */; };
 		5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701692B5032260054ADBD /* TextModifier.swift */; };
 		5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */; };
 		5DB701732B5129910054ADBD /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701722B5129910054ADBD /* PasswordStatusView.swift */; };
@@ -80,10 +83,15 @@
 		3C328ACC2B4E9349000970CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C328ACE2B4E9363000970CA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		3C328AD02B4EE57C000970CA /* AddIBANModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANModel.swift; sourceTree = "<group>"; };
+		3C328AD22B4EE5AE000970CA /* addPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewModel.swift; sourceTree = "<group>"; };
+		3C328AD42B4EE5CC000970CA /* AddIBANViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIBANViewModel.swift; sourceTree = "<group>"; };
+		5D35C5BF2B5183C0003AFE17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerr.swift; sourceTree = "<group>"; };
+		5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAnimationView.swift; sourceTree = "<group>"; };
+		5DB701282B4F253D0054ADBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DB7015C2B50036E0054ADBD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		5DB7015E2B501B1A0054ADBD /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		5DB701652B5029130054ADBD /* RegTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegTextFieldView.swift; sourceTree = "<group>"; };
-		5DB701672B5029790054ADBD /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DB701692B5032260054ADBD /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		5DB701702B5127BF0054ADBD /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 		5DB701722B5129910054ADBD /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
@@ -234,6 +242,7 @@
 		3C328AC52B4E92AB000970CA /* Registration Page */ = {
 			isa = PBXGroup;
 			children = (
+				5D35C5C12B519CD2003AFE17 /* API */,
 				5DB701632B501BAB0054ADBD /* ViewModel */,
 				5DB7016B2B5033680054ADBD /* View */,
 			);
@@ -262,6 +271,15 @@
 			path = "Add IBAN Page ";
 			sourceTree = "<group>";
 		};
+		5D35C5C12B519CD2003AFE17 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */,
+				5D35C5BF2B5183C0003AFE17 /* Constants.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		5DB701632B501BAB0054ADBD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				5DB701652B5029130054ADBD /* RegTextFieldView.swift */,
-				5DB701672B5029790054ADBD /* Styles.swift */,
 				5DB701692B5032260054ADBD /* TextModifier.swift */,
+				5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -377,7 +395,9 @@
 				3C328ACD2B4E9349000970CA /* LoginViewController.swift in Sources */,
 				5DB7016A2B5032260054ADBD /* TextModifier.swift in Sources */,
 				A9974C742B5006E0006DAC5D /* CustomTextFieldView.swift in Sources */,
+				5D7599752B515D9100BD49A5 /* SuccessAnimationView.swift in Sources */,
 				A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */,
+				5D35C5C02B5183C0003AFE17 /* Constants.swift in Sources */,
 				5DB701662B5029130054ADBD /* RegTextFieldView.swift in Sources */,
 				3C1290C92B4F6CD40092F642 /* ColorPalette.swift in Sources */,
 				A9974C722B50069D006DAC5D /* Text.swift in Sources */,
@@ -395,10 +415,10 @@
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
 				39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */,
 				A9974C782B506E3E006DAC5D /* OnboardingView.swift in Sources */,
-				5DB701682B5029790054ADBD /* Styles.swift in Sources */,
 				3C328ACF2B4E9363000970CA /* RegistrationViewController.swift in Sources */,
 				5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */,
 				A9974C762B50071C006DAC5D /* CustomBackground.swift in Sources */,
+				5D35C5C72B51C6E5003AFE17 /* ApiManagerr.swift in Sources */,
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
 				A9974C9A2B508602006DAC5D /* OnboardingModel.swift in Sources */,
 				3C1290C62B4F6C9E0092F642 /* Button.swift in Sources */,

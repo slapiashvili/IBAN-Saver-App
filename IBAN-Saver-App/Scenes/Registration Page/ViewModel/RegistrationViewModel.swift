@@ -5,8 +5,9 @@
 //  Created by Davit Natenadze on 11.01.24.
 //
 
-import Foundation
+import SwiftUI
 import FirebaseAuth
+import Firebase
 
 final class RegistrationViewModel: ObservableObject {
     
@@ -15,21 +16,29 @@ final class RegistrationViewModel: ObservableObject {
     let welcomeTitle = "Welcome"
     let welcomeText = "We're thrilled to see you!"
     let welcomeActionText = "Let's sign you up"
+    @Published var isRegistrationSuccessful = false
    
     // MARK: - Methods
-    func registerUser(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error {
-                print("DEBUG Error is \(error.localizedDescription)")
-                return
+    func registerUser(email: String, username: String, password: String) {
+        ApiManager.registerUser(email: email, username: username, password: password) { success in
+            if success {
+                withAnimation(.easeIn) {
+                    self.isRegistrationSuccessful = true
+                }
             }
-            
-            print("Successful registration")
         }
+        
+//        ApiManager.loginUser(email: email, password: password)
+        
+//        let iban = IBANStruct(name: "margo", surname: "jincharadze", ibanNumber: "ssd23sda2213213", bankName: "Tao")
+//        ApiManager.addIbanToUser(iban: iban)
+        
+//        ApiManager.fetchLoggedInUserData()
+       
     }
     
     func isPasswordCriteriaMet(text: String) ->  Bool {
-        lengthCriteriaMet(text) &&
+        lengthAndNoSpaceMet(text) &&
         uppercaseMet(text) &&
         lowercaseMet(text) &&
         digitMet(text) &&

@@ -9,14 +9,14 @@ import Foundation
 
 final class User {
     var email: String
-    var password: String
+    var username: String
     var ibans: [IBANStruct]
     
     static var current: User?
     
-    init(name: String, password: String, ibans: [IBANStruct] = []) {
+    init(name: String, username: String, ibans: [IBANStruct] = []) {
         self.email = name
-        self.password = password
+        self.username = username
         self.ibans = ibans
     }
 }
