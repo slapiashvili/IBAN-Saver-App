@@ -11,6 +11,7 @@ struct AuthenticationView: View {
     
     // MARK: - Properties
     @StateObject private var viewModel = RegistrationViewModel()
+    @State private var username: String = ""
     @State private var emailInput: String = ""
     @State private var passwordInput: String = ""
     @State private var passwordStatusView = PasswordStatusView()
@@ -89,7 +90,7 @@ private extension AuthenticationView {
 private extension AuthenticationView {
     
     var textFieldStack: some View {
-        RegTextFieldView(emailInput: $emailInput, passwordInput: $passwordInput)
+        RegTextFieldView(username: $username, emailInput: $emailInput, passwordInput: $passwordInput)
             .padding(.top, 60)
             .onChange(of: passwordInput) { newValue in
                 updatePasswordCriteriaView(with: newValue)
@@ -113,7 +114,7 @@ extension AuthenticationView {
     
     func SignUpButtonView(title: String) -> some View {
         Button(title) {
-            viewModel.registerUser(email: emailInput, password: passwordInput)
+            viewModel.registerUser(email: emailInput, username: username, password: passwordInput)
         }
         .frame(height: 44)
         .frame(maxWidth: .infinity)
@@ -122,7 +123,7 @@ extension AuthenticationView {
         .background(viewModel.isPasswordCriteriaMet(text: passwordInput) ? Color.yellow : Color.gray)
         .cornerRadius(8)
         .padding(.bottom, 80)
-        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
+//        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
     }
     
 }

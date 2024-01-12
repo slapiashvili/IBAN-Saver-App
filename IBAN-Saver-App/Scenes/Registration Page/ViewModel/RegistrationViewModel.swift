@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import Firebase
 
 final class RegistrationViewModel: ObservableObject {
     
@@ -18,17 +19,22 @@ final class RegistrationViewModel: ObservableObject {
     @Published var isRegistrationSuccessful = false
    
     // MARK: - Methods
-    func registerUser(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error {
-                print("DEBUG Error is \(error.localizedDescription)")
-                return
-            }
-            
-            withAnimation(.easeIn) {
-                self.isRegistrationSuccessful = true
+    func registerUser(email: String, username: String, password: String) {
+        ApiManager.registerUser(email: email, username: username, password: password) { success in
+            if success {
+                withAnimation(.easeIn) {
+                    self.isRegistrationSuccessful = true
+                }
             }
         }
+        
+//        ApiManager.loginUser(email: email, password: password)
+        
+//        let iban = IBANStruct(name: "margo", surname: "jincharadze", ibanNumber: "ssd23sda2213213", bankName: "Tao")
+//        ApiManager.addIbanToUser(iban: iban)
+        
+//        ApiManager.fetchLoggedInUserData()
+       
     }
     
     func isPasswordCriteriaMet(text: String) ->  Bool {
