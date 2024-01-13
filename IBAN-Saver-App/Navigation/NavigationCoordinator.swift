@@ -27,7 +27,7 @@ class NavigationCoordinator {
             let view = AddPerson(holder: NavigationStackHolder())
             viewController.present(view.viewController, animated: true)        }
 
-    func presentIBANListDetailView(user: User) {
+    func presentIBANListDetailView(user: RegUser) {
             guard let viewController = holder.viewController else { return }
             let view = IBANListDetailView(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
             viewController.navigationController?.pushViewController(view.viewController, animated: true)
@@ -45,9 +45,9 @@ class NavigationCoordinator {
         viewController.navigationController?.pushViewController(view.viewController, animated: true)
     }
     
-    func navigateToIbanList() {
+    func navigateToIbanList(user: RegUser) {
             guard let viewController = holder.viewController else { return }
-            let view = IBANListViewController(holder: NavigationStackHolder())
+            let view = IBANListViewController(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
             viewController.navigationController?.pushViewController(view.viewController, animated: true)
         }
         

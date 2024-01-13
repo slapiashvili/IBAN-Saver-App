@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListRowView: View {
     //MARK: Properties
-    var user: User
+    var user: RegUser
     
     //MARK: Body
     var body: some View {

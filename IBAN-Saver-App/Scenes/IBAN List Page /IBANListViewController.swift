@@ -13,28 +13,29 @@ struct IBANListViewController: ViewControllable {
     var holder: NavigationStackHolder
     let navigationCoordinator: NavigationCoordinator
     
-    init(holder: NavigationStackHolder) {
-        self.holder = holder
-        self.navigationCoordinator = NavigationCoordinator(holder: holder)
-    }
-    
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
     @State private var isShowingDetails = false
-    @State private var selectedUser: User?
-
+    @State private var selectedUser: RegUser
     
+    
+    init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: RegUser) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+        self.selectedUser = user
+    }
     
     var body: some View {
            VStack {
                listTitleView
                ScrollView {
-                   ForEach(viewModel.users, id: \.id) { user in
-                       ListRowView(user: user)
-                           .onTapGesture {
-                               navigationCoordinator.presentIBANListDetailView(user: user)
-                           }
-                   }
+//                   ForEach(viewModel.users, id: \.id) { user in
+//                       ListRowView(user: user)
+//                           .onTapGesture {
+//                               navigationCoordinator.presentIBANListDetailView(user: user)
+//                           }
+//                   }
+                   Text(selectedUser.username)
                }
                addPersonButton
            }
@@ -42,20 +43,20 @@ struct IBANListViewController: ViewControllable {
     
     
     
-    private var listView: some View {
-        
-        List{
-            ForEach(viewModel.users, id: \.id) { user in
-                ListRowView(user: user)
-                    .onTapGesture {
-                        selectedUser = user
-                        isShowingDetails = true
-                        
-                    }
-            }
-            
-        }
-    }
+//    private var listView: some View {
+//        
+//        List{
+//            ForEach(viewModel.users, id: \.id) { user in
+//                ListRowView(user: user)
+//                    .onTapGesture {
+//                        selectedUser = user
+//                        isShowingDetails = true
+//                        
+//                    }
+//            }
+//            
+//        }
+//    }
     
     private var listTitleView: some View {
         Text("IBAN List View")

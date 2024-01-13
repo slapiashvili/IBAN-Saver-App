@@ -14,7 +14,7 @@ struct LogInView: ViewControllable {
     @State private var emailInput: String = ""
     @State private var passwordInput: String = ""
     @State private var viewModel = LoginViewModel()
-    
+
     init(holder: NavigationStackHolder) {
         self.holder = holder
         self.navigationCoordinator = NavigationCoordinator(holder: holder)
@@ -23,7 +23,7 @@ struct LogInView: ViewControllable {
     var body: some View {
         ZStack {
             CustomBackground()
-            LogInContentView(emailInput: $emailInput, passwordInput: $passwordInput, viewModel: viewModel, navigationCoordinator: navigationCoordinator)
+            LogInContentView(emailInput: $emailInput, passwordInput: $passwordInput, viewModel: viewModel, navigationCoordinator: navigationCoordinator, user: viewModel.user)
         }
     }
 }
@@ -34,7 +34,8 @@ private struct LogInContentView: View {
     @Binding var passwordInput: String
     var viewModel: LoginViewModel
     let navigationCoordinator: NavigationCoordinator
-    
+    var user : RegUser
+
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -44,7 +45,7 @@ private struct LogInContentView: View {
             } .padding(.horizontal, 24)
             Spacer()
             RegisterButton(navigationCoordinator: navigationCoordinator)
-            SignInButton(viewModel: viewModel, navigationCoordinator: navigationCoordinator, emailInput: emailInput, passwordInput: passwordInput)
+            SignInButton(viewModel: viewModel, navigationCoordinator: navigationCoordinator, emailInput: emailInput, passwordInput: passwordInput, user: user)
         }
     }
 }
@@ -117,6 +118,9 @@ private struct SignInButton: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     
+    var user : RegUser
+    
+    
     var body: some View {
         Button("Sign In") {
             viewModel.login(email: emailInput, password: passwordInput) { error in
@@ -126,7 +130,7 @@ private struct SignInButton: View {
                     showAlert = true
                 } else {
                     print("Login successful")
-                    navigationCoordinator.navigateToIbanList()
+                    navigationCoordinator.navigateToIbanList(user: user)
                 }
             }
         }
