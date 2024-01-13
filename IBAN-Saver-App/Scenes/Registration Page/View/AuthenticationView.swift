@@ -7,7 +7,16 @@
 
 import SwiftUI
 
-struct AuthenticationView: View {
+struct AuthenticationView: ViewControllable {
+    
+    var holder: NavigationStackHolder
+    let navigationCoordinator: NavigationCoordinator
+    
+    init(holder: NavigationStackHolder) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+        
+    }
     
     // MARK: - Properties
     @StateObject private var viewModel = RegistrationViewModel()
@@ -115,6 +124,7 @@ extension AuthenticationView {
     func SignUpButtonView(title: String) -> some View {
         Button(title) {
             viewModel.registerUser(email: emailInput, username: username, password: passwordInput)
+            navigationCoordinator.navigateToLogIn()
         }
         .frame(height: 44)
         .frame(maxWidth: .infinity)
@@ -129,7 +139,3 @@ extension AuthenticationView {
 }
 
 
-// MARK: - Preview
-#Preview {
-    AuthenticationView()
-}

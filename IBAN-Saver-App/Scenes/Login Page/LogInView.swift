@@ -7,11 +7,37 @@
 
 import SwiftUI
 
-struct LogInView: View {
+struct LogInView: ViewControllable {
+    
+    var holder: NavigationStackHolder
+    let navigationCoordinator: NavigationCoordinator
+    
+    init(holder: NavigationStackHolder) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+    }
+    
     var body: some View {
         ZStack {
             CustomBackground()
             LogInContentView()
+            
+            VStack {
+        
+                Button(action: {
+                    navigationCoordinator.navigateToIbanList()
+                }) {
+                    Text("Log In")
+                }
+                
+                
+                Button(action: {
+                    navigationCoordinator.navigateToRegistration()
+                }) {
+                    Text("Don't have an account?")
+                }
+            }
+
         }
     }
     
@@ -25,8 +51,8 @@ struct LogInView: View {
                         .padding(.top, 60)
                 } .padding(.horizontal, 24)
                 Spacer()
-                RegisterButton()
-                SignInButton()
+//                RegisterButton()
+//                SignInButton()
             }
         }
     }
@@ -94,6 +120,3 @@ struct LogInView: View {
     }
 }
 
-#Preview {
-    LogInView()
-}
