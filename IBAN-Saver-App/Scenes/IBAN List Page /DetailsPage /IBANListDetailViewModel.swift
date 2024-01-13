@@ -7,10 +7,10 @@
 
 import Foundation
 final class IBANListDetailViewModel: ObservableObject {
-     var selectedUser: User
+     var selectedUser: RegUser
     
     //MARK: - Init
-    init(selectedUser: User) {
+    init(selectedUser: RegUser) {
         self.selectedUser = selectedUser
     }
 }

@@ -15,7 +15,7 @@ struct IBANListDetailView: ViewControllable {
         //MARK: - Properties
         @StateObject var viewModel: IBANListDetailViewModel
         
-        init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: User) {
+        init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: RegUser) {
             self.holder = holder
             self.navigationCoordinator = navigationCoordinator
             self._viewModel = StateObject(wrappedValue: IBANListDetailViewModel(selectedUser: user))
@@ -38,9 +38,9 @@ struct IBANListDetailView: ViewControllable {
     //MARK: - View
     private var listView: some View {
         List {
-            ForEach(viewModel.selectedUser.ibans, id: \.self) { iban in
-                DetailView(IBAN: iban)
-            }
+//            ForEach(viewModel.selectedUser.ibans, id: \.self) { iban in
+//                DetailView(IBAN: iban)
+//            }
         }
     }
     
