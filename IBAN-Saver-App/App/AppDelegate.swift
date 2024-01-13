@@ -17,14 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func asd() {
-        //TODO: - at start
-        if Auth.auth().currentUser == nil {
-            //TODO: - show login page
-        }else {
-            //TODO: - show slapi's page
-        }
-    }
+
 
 }
 
