@@ -24,6 +24,7 @@
 		3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */; };
 		3C328AC92B4E9304000970CA /* AddPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328AC82B4E9304000970CA /* AddPerson.swift */; };
 		3C328ACB2B4E9334000970CA /* IBANListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C328ACA2B4E9334000970CA /* IBANListViewController.swift */; };
+		3CCE16BF2B531F3A008D51C6 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE16BE2B531F3A008D51C6 /* Scanner.swift */; };
 		5D35C5C02B5183C0003AFE17 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35C5BF2B5183C0003AFE17 /* Constants.swift */; };
 		5D35C5C72B51C6E5003AFE17 /* ApiManagerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */; };
 		5D7599752B515D9100BD49A5 /* SuccessAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */; };
@@ -74,6 +75,7 @@
 		3C328ABD2B4E91DA000970CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C328AC82B4E9304000970CA /* AddPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPerson.swift; sourceTree = "<group>"; };
 		3C328ACA2B4E9334000970CA /* IBANListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListViewController.swift; sourceTree = "<group>"; };
+		3CCE16BE2B531F3A008D51C6 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		5D35C5BF2B5183C0003AFE17 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D35C5C62B51C6E5003AFE17 /* ApiManagerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerr.swift; sourceTree = "<group>"; };
 		5D7599742B515D9100BD49A5 /* SuccessAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAnimationView.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				3C328AC82B4E9304000970CA /* AddPerson.swift */,
+				3CCE16BE2B531F3A008D51C6 /* Scanner.swift */,
 				3C296AAD2B517C2500B70AEF /* AddIBAN.swift */,
 			);
 			path = "Add IBAN Page ";
@@ -432,6 +435,7 @@
 				5DCB3DFE2B52BBA4001CB52C /* User.swift in Sources */,
 				3C328AB22B4E91D9000970CA /* SceneDelegate.swift in Sources */,
 				3C296AAA2B5178C100B70AEF /* ViewWrapper.swift in Sources */,
+				3CCE16BF2B531F3A008D51C6 /* Scanner.swift in Sources */,
 				5DB701732B5129910054ADBD /* PasswordStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
