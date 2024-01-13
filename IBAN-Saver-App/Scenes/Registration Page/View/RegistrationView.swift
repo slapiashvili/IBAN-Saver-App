@@ -1,5 +1,5 @@
 //
-//  AuthenticationView.swift
+//  RegistrationView.swift
 //  IBAN-Saver-App
 //
 //  Created by Davit Natenadze on 11.01.24.
@@ -7,16 +7,7 @@
 
 import SwiftUI
 
-struct AuthenticationView: ViewControllable {
-    
-    var holder: NavigationStackHolder
-    let navigationCoordinator: NavigationCoordinator
-    
-    init(holder: NavigationStackHolder) {
-        self.holder = holder
-        self.navigationCoordinator = NavigationCoordinator(holder: holder)
-        
-    }
+struct RegistrationView: ViewControllable {
     
     // MARK: - Properties
     @StateObject private var viewModel = RegistrationViewModel()
@@ -24,8 +15,9 @@ struct AuthenticationView: ViewControllable {
     @State private var emailInput: String = ""
     @State private var passwordInput: String = ""
     @State private var passwordStatusView = PasswordStatusView()
+    var holder: NavigationStackHolder
     
-   // MARK: - Body
+    // MARK: - Body
     var body: some View {
         ZStack {
             background
@@ -39,8 +31,7 @@ struct AuthenticationView: ViewControllable {
 
 
 // MARK: - Extensions
-private extension AuthenticationView {
-    
+private extension RegistrationView {
     var background: some View {
         ZStack {
             Color.cyan.ignoresSafeArea()
@@ -73,12 +64,14 @@ private extension AuthenticationView {
                     }
                 }
             }
+            .onDisappear {
+                holder.viewController?.navigationController?.popViewController(animated: true)
+            }
     }
 }
 
 // MARK: - Header
-private extension AuthenticationView {
-    
+private extension RegistrationView {
     var header: some View {
         VStack (alignment: .leading, spacing: 20) {
             Text(viewModel.welcomeTitle)
@@ -96,8 +89,7 @@ private extension AuthenticationView {
 }
 
 // MARK: - TextField Stack
-private extension AuthenticationView {
-    
+private extension RegistrationView {
     var textFieldStack: some View {
         RegTextFieldView(username: $username, emailInput: $emailInput, passwordInput: $passwordInput)
             .padding(.top, 60)
@@ -116,15 +108,13 @@ private extension AuthenticationView {
         }
     }
 }
-    
+
 
 // MARK: - Button
-extension AuthenticationView {
-    
+extension RegistrationView {
     func SignUpButtonView(title: String) -> some View {
         Button(title) {
             viewModel.registerUser(email: emailInput, username: username, password: passwordInput)
-            navigationCoordinator.navigateToLogIn()
         }
         .frame(height: 44)
         .frame(maxWidth: .infinity)
@@ -133,9 +123,8 @@ extension AuthenticationView {
         .background(viewModel.isPasswordCriteriaMet(text: passwordInput) ? Color.yellow : Color.gray)
         .cornerRadius(8)
         .padding(.bottom, 80)
-//        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
+        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
     }
-    
 }
 
 
