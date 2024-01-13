@@ -40,7 +40,9 @@ class NavigationCoordinator {
     }
     
     func navigateToIbanList(user: User) {
-        guard let viewController = holder.viewController else { return }
+        guard let viewController = holder.viewController else {
+            return
+        }
         let view = IBANListViewController(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
         viewController.navigationController?.pushViewController(view.viewController, animated: true)
     }

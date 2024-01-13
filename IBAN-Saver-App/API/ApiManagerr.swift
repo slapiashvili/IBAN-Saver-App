@@ -67,8 +67,6 @@ class ApiManager {
             }
             
             let user = User(uid: uid, dictionary: userData, contacts: contacts)
-            print(user.username)
-            print(user.email)
             completion(user)
         }
     }
@@ -147,10 +145,6 @@ class ApiManager {
     
     
     
-    
-    
-    
-    
     //    static func addIbanToUser(iban: Iban) {
     //        guard let uid = Auth.auth().currentUser?.uid else { return }
     //
@@ -180,14 +174,12 @@ class ApiManager {
     //        }
     //    }
     
-    //        static func signOut() {
-    //            do {
-    //                try Auth.auth().signOut()
-    //            }catch {
-    //                print("erros sign out")
-    //            }
-    //        }
-    
-    
+    static func signOut() {
+        do {
+            try Auth.auth().signOut()
+        }catch {
+            print("erros sign out")
+        }
+    }
     
 }
