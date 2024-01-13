@@ -37,18 +37,18 @@ class ApiManager {
         }
     }
     
-    static func loginUser(email: String, password: String, completion: @escaping (User) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if let error {
-                print("DEBUG Error is \(error.localizedDescription)")
-                return
-            }
+    static func loginUser(email: String, password: String, completion: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
+            Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                if let error = error {
+                    onFailure(error)
+                    return
+                }
+
 
             fetchUserData() { user in
                 completion(user)
             }
         }
-    }
     
     static func fetchUserData(completion: @escaping (User) -> Void) {
         
