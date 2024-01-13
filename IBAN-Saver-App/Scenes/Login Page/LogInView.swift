@@ -119,7 +119,7 @@ private struct SignInButton: View {
     
     
     var body: some View {
-        Button("Sign In") {
+        Button("Sign In") {       
             viewModel.login(email: emailInput, password: passwordInput) { user in
                 navigationCoordinator.navigateToIbanList(user: user)
             }

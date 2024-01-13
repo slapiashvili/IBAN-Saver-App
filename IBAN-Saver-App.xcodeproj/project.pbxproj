@@ -201,10 +201,11 @@
 			isa = PBXGroup;
 			children = (
 				3C328AC32B4E923A000970CA /* App */,
+				3C1290B82B4F68C50092F642 /* Models */,
+				5D35C5C12B519CD2003AFE17 /* API */,
 				3C1290B72B4F67970092F642 /* Scenes */,
 				3C296AA82B5178AC00B70AEF /* Navigation */,
 				3C1290C42B4F6C450092F642 /* Components */,
-				3C1290B82B4F68C50092F642 /* Models */,
 				3C1290C72B4F6CBF0092F642 /* Extensions */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
 				5DCB3DFB2B52AFE5001CB52C /* GoogleService-Info.plist */,
@@ -235,7 +236,6 @@
 		3C328AC52B4E92AB000970CA /* Registration Page */ = {
 			isa = PBXGroup;
 			children = (
-				5D35C5C12B519CD2003AFE17 /* API */,
 				5DB701632B501BAB0054ADBD /* ViewModel */,
 				5DB7016B2B5033680054ADBD /* View */,
 			);

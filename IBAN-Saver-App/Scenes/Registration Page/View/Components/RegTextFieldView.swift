@@ -65,6 +65,7 @@ struct CustomTextFieldStyle1: TextFieldStyle {
                     .stroke(Color.ibanText.opacity(0.4), lineWidth: 1)
             )
             .foregroundColor(.ibanText)
+            .autocorrectionDisabled()
     }
 }
 

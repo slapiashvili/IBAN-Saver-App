@@ -9,6 +9,13 @@ import Foundation
 import Firebase
 
 
+struct Iban1 {
+    let name: String
+    let surname: String
+    let ibanNumber: String
+    let bankName: String
+}
+
 class ApiManager {
     
     static func registerUser(email: String, username: String, password: String, completion: @escaping (Bool) -> Void) {
@@ -70,72 +77,79 @@ class ApiManager {
             let user = User(username: username, email: email, contacts: contacts)
             print(user.username)
             print(user.email)
-            print("contacts count: \(user.contacts.count)" )
             completion(user)
         }
     }
     
-//    static func addIbanToUser(iban: Iban) {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//
-//        let newIban = [
-//            "name": iban.name,
-//            "surname": iban.surname,
-//            "ibanNumber": iban.ibanNumber,
-//            "bankName": iban.bankName
-//        ]
-//
-//        REF_USERS.child(uid).child("ibans").observeSingleEvent(of: .value) { snapshot in
-//            var ibansArray: [[String: Any]] = []
-//
-//            if let existingIbans = snapshot.value as? [[String: Any]] {
-//                ibansArray = existingIbans
-//            }
-//
-//            ibansArray.append(newIban)
-//
-//            let updatedIbans = ["ibans": ibansArray]
-//
-//            REF_USERS.child(uid).updateChildValues(updatedIbans) { error, ref in
-//                if let error = error {
-//                    print("DEBUG Error updating IBANs: \(error.localizedDescription)")
-//                    return
-//                }
-//                print("Successfully updated IBANs")
-//            }
-//        }
-//    }
-//
-//    
-//    static func fetchLoggedInUserData() {
-//        
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        
-//        REF_USERS.child(uid).observeSingleEvent(of: .value) { snapshot, _  in
-//            guard let userData = snapshot.value as? [String: Any] else {
-//                return
-//            }
-//            
-//            var ibans: [Iban] = []
-//
-//            let email = userData["email"] as? String ?? ""
-//            let username = userData["username"] as? String ?? ""
-//
-//            if let ibansData = userData["ibans"] as? [[String: Any]] {
-//                for ibanData in ibansData {
-//                    let name = ibanData["name"] as? String ?? ""
-//                    let surname = ibanData["surname"] as? String ?? ""
-//                    let ibanNumber = ibanData["ibanNumber"] as? String ?? ""
-//                    let bankName = ibanData["bankName"] as? String ?? ""
-//                    let iban = Iban(name: name, surname: surname, ibanNumber: ibanNumber, bankName: bankName)
-//                    ibans.append(iban)
-//                }
-//            }
-//
-//            let user = User(name: email, username: username, ibans: ibans)
-//            print(user.email)
-//            print(user.username)
-//            print(user.ibans.count)
-//        }
-//    }
+    // MARK: - New Era
+    
+    static func addContactToUser(contact: Contact) {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("no uid")
+            return
+        }
+
+        let newContact = [
+            "name": contact.name,
+            "surname": contact.surname,
+            "ibans": contact.ibans.map { iban in
+                [
+                    "ibanNumber": iban.ibanNumber,
+                    "bankName": iban.bankName
+                ]
+            }
+        ] as [String: Any]
+
+        REF_USERS.child(uid).child("contacts").observeSingleEvent(of: .value) {  snapshot in
+            var contactsArray: [[String: Any]] = []
+
+            if let existingContacts = snapshot.value as? [[String: Any]] {
+                contactsArray = existingContacts
+            }
+
+            contactsArray.append(newContact)
+            let updatedContacts = ["contacts": contactsArray]
+
+            REF_USERS.child(uid).updateChildValues(updatedContacts) { error, ref in
+                if let error {
+                    print("Error updating contacts: \(error.localizedDescription)")
+                    return
+                }
+                print("Successfully updated contacts")
+            }
+        }
+    }
+
+
+    
+    
+    static func addIbanToUser(iban: Iban) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+
+        let newIban = [
+            "ibanNumber": iban.ibanNumber,
+            "bankName": iban.bankName
+        ]
+
+        REF_USERS.child(uid).child("contacts").child("ibans").observeSingleEvent(of: .value) { snapshot in
+            var ibansArray: [[String: Any]] = []
+
+            if let existingIbans = snapshot.value as? [[String: Any]] {
+                ibansArray = existingIbans
+            }
+
+            ibansArray.append(newIban)
+
+            let updatedIbans = ["ibans": ibansArray]
+
+            REF_USERS.child(uid).updateChildValues(updatedIbans) { error, ref in
+                if let error  {
+                    print("DEBUG Error updating IBANs: \(error.localizedDescription)")
+                    return
+                }
+                print("Successfully updated IBANs")
+            }
+        }
+    }
+
 }
