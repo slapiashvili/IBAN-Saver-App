@@ -22,11 +22,21 @@ struct IBANListViewController: ViewControllable {
         self.holder = holder
         self.navigationCoordinator = NavigationCoordinator(holder: holder)
         self.selectedUser = user
+        
     }
     
     //MARK: - Body
     var body: some View {
         VStack {
+            HStack {
+                Spacer()
+                
+                Button("logout") {
+                    ApiManager.signOut()
+                    navigationCoordinator.presentLoginView()
+                }
+                .padding(.horizontal)
+            }
             listTitleView
             Spacer()
             Text(selectedUser.username)
@@ -36,8 +46,8 @@ struct IBANListViewController: ViewControllable {
             }) {
                 Text("Add Person")
             }
-            
         }
+        .navigationBarBackButtonHidden()
     }
     
     //MARK: - View

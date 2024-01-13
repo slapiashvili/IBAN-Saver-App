@@ -15,10 +15,17 @@ class NavigationCoordinator {
     }
     
     
+    func presentLoginView() {
+        guard let viewController = holder.viewController else { return }
+        let view = LogInView(holder: NavigationStackHolder())
+        viewController.navigationController?.pushViewController(view.viewController, animated: true)
+    }
+    
     func presentAddPersonView() {
         guard let viewController = holder.viewController else { return }
         let view = AddPerson(holder: NavigationStackHolder())
-        viewController.present(view.viewController, animated: true)        }
+        viewController.present(view.viewController, animated: true)    
+    }
     
     func presentIBANListDetailView(iban: [Iban]) {
         guard let viewController = holder.viewController else { return }

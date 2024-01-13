@@ -41,6 +41,7 @@
 		5DB701732B5129910054ADBD /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB701722B5129910054ADBD /* PasswordStatusView.swift */; };
 		5DCB3DFE2B52BBA4001CB52C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3DFD2B52BBA4001CB52C /* User.swift */; };
 		5DCB3E042B53132D001CB52C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB3E032B53132D001CB52C /* GoogleService-Info.plist */; };
+		5DCB3E062B532792001CB52C /* Scaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3E052B532792001CB52C /* Scaner.swift */; };
 		A9974C6C2B4ED3BF006DAC5D /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */; };
 		A9974C722B50069D006DAC5D /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C712B50069D006DAC5D /* Text.swift */; };
 		A9974C742B5006E0006DAC5D /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */; };
@@ -85,6 +86,7 @@
 		5DB701722B5129910054ADBD /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		5DCB3DFD2B52BBA4001CB52C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5DCB3E032B53132D001CB52C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5DCB3E052B532792001CB52C /* Scaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scaner.swift; sourceTree = "<group>"; };
 		A9974C6B2B4ED3BF006DAC5D /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		A9974C712B50069D006DAC5D /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		A9974C732B5006E0006DAC5D /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				3C328AC82B4E9304000970CA /* AddPerson.swift */,
 				3C296AAD2B517C2500B70AEF /* AddIBAN.swift */,
+				5DCB3E052B532792001CB52C /* Scaner.swift */,
 			);
 			path = "Add IBAN Page ";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				39413F112B4ECA9F007262C0 /* ListRowView.swift in Sources */,
 				39413F152B4ED654007262C0 /* IBANListViewModel.swift in Sources */,
 				39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */,
+				5DCB3E062B532792001CB52C /* Scaner.swift in Sources */,
 				39797ECA2B4F1B33004D7923 /* IBANListDetailViewModel.swift in Sources */,
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,
 				39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */,
@@ -576,7 +580,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UY94N2F65W;
+				DEVELOPMENT_TEAM = N6PQF93RKP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IBAN-Saver-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -589,7 +593,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tbcacademy.collab.IBAN-Saver-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -604,7 +608,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UY94N2F65W;
+				DEVELOPMENT_TEAM = N6PQF93RKP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IBAN-Saver-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -617,7 +621,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tbcacademy.collab.IBAN-Saver-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
