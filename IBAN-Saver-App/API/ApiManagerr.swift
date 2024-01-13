@@ -10,13 +10,6 @@ import Firebase
 import FirebaseAuth
 
 
-struct Iban1 {
-    let name: String
-    let surname: String
-    let ibanNumber: String
-    let bankName: String
-}
-
 class ApiManager {
     
     static func registerUser(email: String, username: String, password: String, completion: @escaping (Bool) -> Void) {
@@ -38,17 +31,18 @@ class ApiManager {
     }
     
     static func loginUser(email: String, password: String, completion: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
-            Auth.auth().signIn(withEmail: email, password: password) { result, error in
-                if let error = error {
-                    onFailure(error)
-                    return
-                }
-
-
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                onFailure(error)
+                return
+            }
+            
+            
             fetchUserData() { user in
                 completion(user)
             }
         }
+    }
     
     static func fetchUserData(completion: @escaping (User) -> Void) {
         
@@ -71,7 +65,7 @@ class ApiManager {
                     contacts.append(contact)
                 }
             }
-        
+            
             let user = User(uid: uid, dictionary: userData, contacts: contacts)
             print(user.username)
             print(user.email)
@@ -87,7 +81,7 @@ class ApiManager {
             print("no uid")
             return
         }
-
+        
         let newContact: [String : Any] = [
             "name": contact.name,
             "surname": contact.surname,
@@ -95,11 +89,11 @@ class ApiManager {
                 ["ibanNumber": iban.ibanNumber, "bankName": iban.bankName]
             }
         ]
-
+        
         let contactKey = contact.name.lowercased()
-
+        
         let updatedContacts = ["contacts/\(contactKey)": newContact]
-
+        
         REF_USERS.child(uid).updateChildValues(updatedContacts) { error, ref in
             if let error {
                 print("Error updating contacts: \(error.localizedDescription)")
@@ -108,8 +102,8 @@ class ApiManager {
             print("Successfully updated contacts")
         }
     }
-
-
+    
+    
     
     // MARK: - fetch contacts
     
@@ -118,16 +112,16 @@ class ApiManager {
             print("no uid")
             return
         }
-
+        
         REF_USERS.child(uid).child("contacts").observeSingleEvent(of: .value) { snapshot in
             var contacts: [Contact] = []
-
+            
             if let contactsDict = snapshot.value as? [String: [String: Any]] {
                 for (_, contactData) in contactsDict {
                     if let name = contactData["name"] as? String,
                        let surname = contactData["surname"] as? String,
                        let ibansData = contactData["ibans"] as? [[String: Any]] {
-
+                        
                         var ibans: [Iban] = []
                         for ibanData in ibansData {
                             if let ibanNumber = ibanData["ibanNumber"] as? String,
@@ -136,13 +130,13 @@ class ApiManager {
                                 ibans.append(iban)
                             }
                         }
-
+                        
                         let contact = Contact(name: name, surname: surname, ibans: ibans)
                         contacts.append(contact)
                     }
                 }
             }
-
+            
             print("contacts count is: \(contacts.count)")
             for asd in contacts {
                 print(asd.name)
@@ -150,7 +144,6 @@ class ApiManager {
             completion(contacts)
         }
     }
-
     
     
     
@@ -160,44 +153,44 @@ class ApiManager {
     
     
     
-//    static func addIbanToUser(iban: Iban) {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//
-//        let newIban = [
-//            "ibanNumber": iban.ibanNumber,
-//            "bankName": iban.bankName
-//        ]
-//
-//        REF_USERS.child(uid).child("contacts").child("ibans").observeSingleEvent(of: .value) { snapshot in
-//            var ibansArray: [[String: Any]] = []
-//
-//            if let existingIbans = snapshot.value as? [[String: Any]] {
-//                ibansArray = existingIbans
-//            }
-//
-//            ibansArray.append(newIban)
-//
-//            let updatedIbans = ["ibans": ibansArray]
-//
-//            REF_USERS.child(uid).updateChildValues(updatedIbans) { error, ref in
-//                if let error  {
-//                    print("DEBUG Error updating IBANs: \(error.localizedDescription)")
-//                    return
-//                }
-//                print("Successfully updated IBANs")
-//            }
-//        }
-//    }
     
-    static func signOut() {
-        do {
-           try Auth.auth().signOut()
-        }catch {
-            print("erros sign out")
-        }
-    }
+    //    static func addIbanToUser(iban: Iban) {
+    //        guard let uid = Auth.auth().currentUser?.uid else { return }
+    //
+    //        let newIban = [
+    //            "ibanNumber": iban.ibanNumber,
+    //            "bankName": iban.bankName
+    //        ]
+    //
+    //        REF_USERS.child(uid).child("contacts").child("ibans").observeSingleEvent(of: .value) { snapshot in
+    //            var ibansArray: [[String: Any]] = []
+    //
+    //            if let existingIbans = snapshot.value as? [[String: Any]] {
+    //                ibansArray = existingIbans
+    //            }
+    //
+    //            ibansArray.append(newIban)
+    //
+    //            let updatedIbans = ["ibans": ibansArray]
+    //
+    //            REF_USERS.child(uid).updateChildValues(updatedIbans) { error, ref in
+    //                if let error  {
+    //                    print("DEBUG Error updating IBANs: \(error.localizedDescription)")
+    //                    return
+    //                }
+    //                print("Successfully updated IBANs")
+    //            }
+    //        }
+    //    }
+    
+    //        static func signOut() {
+    //            do {
+    //                try Auth.auth().signOut()
+    //            }catch {
+    //                print("erros sign out")
+    //            }
+    //        }
     
     
- 
-
+    
 }
