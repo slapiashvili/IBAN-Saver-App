@@ -16,17 +16,21 @@ struct SignInButton: View {
     var passwordInput: String
     
     @State private var showAlert = false
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
+    @State private var alertTitle = "Error"
+    @State private var alertMessage = "Invalid email or password. Please try again."
     
     var body: some View {
         Button("Sign In") {
             viewModel.login(email: emailInput, password: passwordInput) { user in
                 navigationCoordinator.navigateToIbanList(user: user)
+            } onFailure: { error in
+                showAlert = true
             }
         }
         .primaryButton
         .padding(.bottom, 80)
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
     }
 }
-
