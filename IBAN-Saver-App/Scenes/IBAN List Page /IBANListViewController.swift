@@ -16,10 +16,10 @@ struct IBANListViewController: ViewControllable {
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
     @State private var isShowingDetails = false
-    @State private var selectedUser: RegUser
+    @State private var selectedUser: User
     
     
-    init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: RegUser) {
+    init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: User) {
         self.holder = holder
         self.navigationCoordinator = NavigationCoordinator(holder: holder)
         self.selectedUser = user

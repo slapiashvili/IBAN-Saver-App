@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-struct AuthenticationView: ViewControllable {
+struct RegistrationView: ViewControllable {
     
     var holder: NavigationStackHolder
-    let navigationCoordinator: NavigationCoordinator
     
     init(holder: NavigationStackHolder) {
         self.holder = holder
-        self.navigationCoordinator = NavigationCoordinator(holder: holder)
-        
     }
     
     // MARK: - Properties
@@ -39,7 +36,7 @@ struct AuthenticationView: ViewControllable {
 
 
 // MARK: - Extensions
-private extension AuthenticationView {
+private extension RegistrationView {
     
     var background: some View {
         ZStack {
@@ -70,11 +67,17 @@ private extension AuthenticationView {
                     }
                 }
             }
+//            .onDisappear(perform: {
+//                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+//            })
+            .onDisappear {
+                holder.viewController?.navigationController?.popViewController(animated: true)
+            }
     }
 }
 
 // MARK: - Header
-private extension AuthenticationView {
+private extension RegistrationView {
     
     var header: some View {
         VStack (alignment: .leading, spacing: 20) {
@@ -93,7 +96,7 @@ private extension AuthenticationView {
 }
 
 // MARK: - TextField Stack
-private extension AuthenticationView {
+private extension RegistrationView {
     
     var textFieldStack: some View {
         RegTextFieldView(username: $username, emailInput: $emailInput, passwordInput: $passwordInput)
@@ -116,12 +119,11 @@ private extension AuthenticationView {
     
 
 // MARK: - Button
-extension AuthenticationView {
+extension RegistrationView {
     
     func SignUpButtonView(title: String) -> some View {
         Button(title) {
             viewModel.registerUser(email: emailInput, username: username, password: passwordInput)
-            navigationCoordinator.navigateToLogIn()
         }
         .frame(height: 44)
         .frame(maxWidth: .infinity)
@@ -130,7 +132,7 @@ extension AuthenticationView {
         .background(viewModel.isPasswordCriteriaMet(text: passwordInput) ? Color.yellow : Color.gray)
         .cornerRadius(8)
         .padding(.bottom, 80)
-//        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
+        .disabled(!viewModel.isPasswordCriteriaMet(text: passwordInput))
     }
     
 }

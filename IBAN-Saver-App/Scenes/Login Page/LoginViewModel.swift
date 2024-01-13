@@ -9,15 +9,15 @@ import SwiftUI
 import FirebaseAuth
 
 final class LoginViewModel: ObservableObject {
-    @Published var user : RegUser
+
     
     init() {
-        self.user = RegUser(name: "Slapi", username: "Slapi")
+
     }
     
-    func login(email: String, password: String, completion: @escaping (Error?) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            completion(error)
+    func login(email: String, password: String, completion: @escaping (User) -> Void) {
+        ApiManager.loginUser(email: email, password: password) { user in
+          completion(user)
         }
     }
 }
