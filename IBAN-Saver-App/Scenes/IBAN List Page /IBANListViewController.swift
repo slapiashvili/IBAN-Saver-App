@@ -9,15 +9,14 @@ import UIKit
 import SwiftUI
 
 struct IBANListViewController: ViewControllable {
-    
+    //MARK: - Properties
     var holder: NavigationStackHolder
     let navigationCoordinator: NavigationCoordinator
+    @ObservedObject private var contactViewModel = ContactViewModel.shared
     
-    //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
     @State private var isShowingDetails = false
     @State private var selectedUser: User
-    
     
     init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: User) {
         self.holder = holder
@@ -25,39 +24,23 @@ struct IBANListViewController: ViewControllable {
         self.selectedUser = user
     }
     
+    //MARK: - Body
     var body: some View {
-           VStack {
-               listTitleView
-               ScrollView {
-//                   ForEach(viewModel.users, id: \.id) { user in
-//                       ListRowView(user: user)
-//                           .onTapGesture {
-//                               navigationCoordinator.presentIBANListDetailView(user: user)
-//                           }
-//                   }
-                   Text(selectedUser.username)
-               }
-               addPersonButton
-           }
-       }
+        VStack {
+            listTitleView
+            Spacer()
+            Text(selectedUser.username)
+            listView
+            Button(action: {
+                navigationCoordinator.presentAddPersonView()
+            }) {
+                Text("Add Person")
+            }
+            
+        }
+    }
     
-    
-    
-//    private var listView: some View {
-//        
-//        List{
-//            ForEach(viewModel.users, id: \.id) { user in
-//                ListRowView(user: user)
-//                    .onTapGesture {
-//                        selectedUser = user
-//                        isShowingDetails = true
-//                        
-//                    }
-//            }
-//            
-//        }
-//    }
-    
+    //MARK: - View
     private var listTitleView: some View {
         Text("IBAN List View")
             .font(.title)
@@ -68,11 +51,24 @@ struct IBANListViewController: ViewControllable {
     }
     
     private var addPersonButton: some View {
-            Button("Add Person") {
-                navigationCoordinator.presentAddPersonView()
-            }
-            .padding()
+        Button("Add Person") {
+            navigationCoordinator.presentAddPersonView()
         }
+        .padding()
+    }
     
-    
+    private var listView: some View {
+        List {
+            ForEach(contactViewModel.contacts, id: \.surname) { contact in
+                VStack(alignment: .leading) {
+                    Text("\(contact.name) \(contact.surname)")
+                        .font(.headline)
+                        .padding(.bottom, 2)
+                }
+                .onTapGesture {
+                    navigationCoordinator.presentIBANListDetailView(iban: contact.ibans)
+                }
+            }
+        }
+    }
 }
