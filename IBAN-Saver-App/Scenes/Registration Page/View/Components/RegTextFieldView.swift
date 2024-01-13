@@ -34,10 +34,10 @@ struct CustomTextFieldView1: View {
             ZStack(alignment: .trailing) {
                 if isSecure {
                     SecureField(placeholder, text: $text, prompt:
-                                    Text(placeholder).foregroundColor(.white.opacity(0.7)))
+                                    Text(placeholder).foregroundColor(.ibanText.opacity(0.7)))
                 } else {
                     TextField(placeholder, text: $text, prompt:
-                                Text(placeholder).foregroundColor(.white.opacity(0.7)))
+                                Text(placeholder).foregroundColor(.ibanText.opacity(0.7)))
                 }
                 
                 if !text.isEmpty {
@@ -45,7 +45,7 @@ struct CustomTextFieldView1: View {
                         text = ""
                     }) {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.white.opacity(0.6))
+                            .foregroundColor(.ibanText.opacity(0.6))
                             .padding(8)
                     }
                 }
@@ -62,9 +62,9 @@ struct CustomTextFieldStyle1: TextFieldStyle {
             .padding(16)
             .background(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                    .stroke(Color.ibanText.opacity(0.4), lineWidth: 1)
             )
-            .foregroundColor(.white)
+            .foregroundColor(.ibanText)
     }
 }
 
