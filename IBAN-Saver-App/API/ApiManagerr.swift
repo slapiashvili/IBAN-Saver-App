@@ -141,39 +141,6 @@ class ApiManager {
     }
     
     
-    
-    
-    
-    
-    //    static func addIbanToUser(iban: Iban) {
-    //        guard let uid = Auth.auth().currentUser?.uid else { return }
-    //
-    //        let newIban = [
-    //            "ibanNumber": iban.ibanNumber,
-    //            "bankName": iban.bankName
-    //        ]
-    //
-    //        REF_USERS.child(uid).child("contacts").child("ibans").observeSingleEvent(of: .value) { snapshot in
-    //            var ibansArray: [[String: Any]] = []
-    //
-    //            if let existingIbans = snapshot.value as? [[String: Any]] {
-    //                ibansArray = existingIbans
-    //            }
-    //
-    //            ibansArray.append(newIban)
-    //
-    //            let updatedIbans = ["ibans": ibansArray]
-    //
-    //            REF_USERS.child(uid).updateChildValues(updatedIbans) { error, ref in
-    //                if let error  {
-    //                    print("DEBUG Error updating IBANs: \(error.localizedDescription)")
-    //                    return
-    //                }
-    //                print("Successfully updated IBANs")
-    //            }
-    //        }
-    //    }
-    
     static func signOut() {
         do {
             try Auth.auth().signOut()

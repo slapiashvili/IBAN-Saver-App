@@ -29,6 +29,7 @@ struct LogInView: ViewControllable {
             CustomBackground()
             LogInContentView(emailInput: $emailInput, passwordInput: $passwordInput, viewModel: viewModel, navigationCoordinator: navigationCoordinator)
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
