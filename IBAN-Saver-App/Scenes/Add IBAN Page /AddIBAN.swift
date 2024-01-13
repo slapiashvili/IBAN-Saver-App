@@ -10,7 +10,13 @@ import SwiftUI
 struct AddIBAN: ViewControllable {
     
     var holder: NavigationStackHolder
-
+    let navigationCoordinator: NavigationCoordinator
+    
+    init(holder: NavigationStackHolder) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+    }
+    
     @State private var successMessage: String? = nil
     @State private var ibanNumber = ""
     @State private var bankName = ""

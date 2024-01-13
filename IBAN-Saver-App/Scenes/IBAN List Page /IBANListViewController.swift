@@ -8,24 +8,39 @@
 import UIKit
 import SwiftUI
 
-struct IBANListViewController: View {
+struct IBANListViewController: ViewControllable {
+    
+    var holder: NavigationStackHolder
+    let navigationCoordinator: NavigationCoordinator
+    
+    init(holder: NavigationStackHolder) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+    }
+    
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
     @State private var isShowingDetails = false
     @State private var selectedUser: User?
 
     
+    
     var body: some View {
-        VStack {
-            listTitleView
-            listView
-        }
-        .sheet(isPresented: $isShowingDetails) {
-            if let user = selectedUser {
-                IBANListDetailView(user: user)
-            }
-        }
-    }
+           VStack {
+               listTitleView
+               ScrollView {
+                   ForEach(viewModel.users, id: \.id) { user in
+                       ListRowView(user: user)
+                           .onTapGesture {
+                               navigationCoordinator.presentIBANListDetailView(user: user)
+                           }
+                   }
+               }
+               addPersonButton
+           }
+       }
+    
+    
     
     private var listView: some View {
         
@@ -35,6 +50,7 @@ struct IBANListViewController: View {
                     .onTapGesture {
                         selectedUser = user
                         isShowingDetails = true
+                        
                     }
             }
             
@@ -49,8 +65,13 @@ struct IBANListViewController: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 20)
     }
-}
-
-#Preview {
-    IBANListViewController()
+    
+    private var addPersonButton: some View {
+            Button("Add Person") {
+                navigationCoordinator.presentAddPersonView()
+            }
+            .padding()
+        }
+    
+    
 }

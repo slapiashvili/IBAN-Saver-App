@@ -26,6 +26,3 @@ struct ListRowView: View {
     }
 }
 
-#Preview {
-    ListRowView(user: User(username: "Mariam Joglidze", ibans: ["1","2"]))
-}

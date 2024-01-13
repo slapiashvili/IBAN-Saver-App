@@ -13,7 +13,13 @@ import SwiftUI
 
 struct AddPerson: ViewControllable {
     var holder: NavigationStackHolder
-        
+    let navigationCoordinator: NavigationCoordinator
+    
+    init(holder: NavigationStackHolder) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+    }
+    
     @State private var successMessage: String? = nil
     @State private var name = ""
     @State private var surname = ""

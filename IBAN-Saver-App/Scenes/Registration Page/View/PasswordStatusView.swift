@@ -29,6 +29,3 @@ struct PasswordStatusView: View {
 }
 
 
-#Preview {
-    PasswordStatusView()
-}

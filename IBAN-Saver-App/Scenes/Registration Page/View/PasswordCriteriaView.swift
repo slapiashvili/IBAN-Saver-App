@@ -31,6 +31,3 @@ struct PasswordCriteriaView: View {
 }
 
 
-#Preview {
-    PasswordCriteriaView(text: "asd1")
-}
