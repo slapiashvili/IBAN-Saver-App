@@ -19,6 +19,15 @@ extension Button {
             .cornerRadius(16)
     }
     
+    // MARK: - AddButton
+    var addButton: some View {
+            Image(systemName: "plus.circle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 24, height: 24)
+                .foregroundColor(Color.ibanButton)
+        }
+    
     // MARK: - SecondaryButton
     var secondaryButton: some View {
         self
