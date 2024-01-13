@@ -14,7 +14,6 @@ struct IBANListViewController: ViewControllable {
     
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
-    @State var retriveUser: String
     @State private var isShowingDetails = false
     @State private var selectedUser: RegUser
     
