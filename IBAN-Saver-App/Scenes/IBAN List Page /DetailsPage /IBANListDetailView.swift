@@ -36,9 +36,14 @@ struct IBANListDetailView: ViewControllable {
     
     //MARK: - View
     private var listView: some View {
+        
         List {
-            //            ForEach(contactViewModel.contacts, id: \.ibans) { contact in
-            //                DetailView(IBAN: contact.ibans.)
+            ForEach(contactViewModel.contacts, id: \.name) { contact in
+                let ibans = contact.ibans
+                ForEach(ibans, id: \.ibanNumber) { iban in
+                    DetailView(IBAN: iban.ibanNumber)
+                }
+            }
         }
     }
     

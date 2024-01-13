@@ -73,9 +73,7 @@ class ApiManager {
         }
     }
     
-    // MARK: - New Era
-    
-    
+    // MARK: - addContactToUser
     static func addContactToUser(contact: Contact) {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("no uid")
@@ -102,7 +100,6 @@ class ApiManager {
             print("Successfully updated contacts")
         }
     }
-    
     
     
     // MARK: - fetch contacts
