@@ -16,11 +16,11 @@ enum TextModifier: ViewModifier {
         case .primary:
             content
                 .font(.headline)
-                .foregroundColor(.white)
+                .foregroundColor(.ibanText)
         case .header:
             content
                 .font(.title)
-                .foregroundColor(.yellow)
+                .foregroundColor(.ibanHeader)
         }
     }
 }

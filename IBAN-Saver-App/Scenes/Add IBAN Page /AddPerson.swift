@@ -5,13 +5,12 @@
 //  Created by Salome Lapiashvili on 10.01.24.
 //
 
-
 import UIKit
 import Vision
 import SwiftUI
 
-
 struct AddPerson: ViewControllable {
+    
     var holder: NavigationStackHolder
     let navigationCoordinator: NavigationCoordinator
     
@@ -29,7 +28,7 @@ struct AddPerson: ViewControllable {
     var body: some View {
         VStack(spacing: 20) {
             Text("Please fill in the following information")
-                .font(.title)
+                .modifier(TextModifier.header)
             
             TextField("Name", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())

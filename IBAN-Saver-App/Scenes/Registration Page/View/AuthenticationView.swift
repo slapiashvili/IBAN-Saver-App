@@ -43,11 +43,8 @@ private extension AuthenticationView {
     
     var background: some View {
         ZStack {
-            Color.cyan.ignoresSafeArea()
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
+            Color.ibanBackground.ignoresSafeArea()
+            CustomBackground()
         }
     }
     
