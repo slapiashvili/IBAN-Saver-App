@@ -15,7 +15,7 @@ struct IBANListDetailView: ViewControllable {
         //MARK: - Properties
         @StateObject var viewModel: IBANListDetailViewModel
         
-        init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: RegUser) {
+        init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: User) {
             self.holder = holder
             self.navigationCoordinator = navigationCoordinator
             self._viewModel = StateObject(wrappedValue: IBANListDetailViewModel(selectedUser: user))

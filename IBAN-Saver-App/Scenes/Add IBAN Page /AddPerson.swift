@@ -9,6 +9,10 @@ import UIKit
 import Vision
 import SwiftUI
 
+
+
+
+
 struct AddPerson: ViewControllable {
     
     var holder: NavigationStackHolder
@@ -20,6 +24,9 @@ struct AddPerson: ViewControllable {
     }
     
     @State private var successMessage: String? = nil
+    
+    
+    
     @State private var name = ""
     @State private var surname = ""
     @State private var ibanNumber = ""

@@ -13,44 +13,35 @@ class NavigationCoordinator {
     init(holder: NavigationStackHolder) {
         self.holder = holder
     }
-
-  
-        func navigateToLogIn() {
-            guard let viewController = holder.viewController else { return }
-            let view = LogInView(holder: NavigationStackHolder())
-            viewController.navigationController?.pushViewController(view.viewController, animated: true)
-        }
-
-
-        func presentAddPersonView() {
-            guard let viewController = holder.viewController else { return }
-            let view = AddPerson(holder: NavigationStackHolder())
-            viewController.present(view.viewController, animated: true)        }
-
-    func presentIBANListDetailView(user: RegUser) {
-            guard let viewController = holder.viewController else { return }
-            let view = IBANListDetailView(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
-            viewController.navigationController?.pushViewController(view.viewController, animated: true)
-        }
-    //
-        func presentAddIBAN() {
-          guard let viewController = holder.viewController else { return }
-          let view = AddIBAN(holder: NavigationStackHolder())
-          viewController.present(view.viewController, animated: true)
-        }
-    //
-    func navigateToRegistration() {
+    
+    
+    func presentAddPersonView() {
         guard let viewController = holder.viewController else { return }
-        let view = AuthenticationView(holder: NavigationStackHolder())
+        let view = AddPerson(holder: NavigationStackHolder())
+        viewController.present(view.viewController, animated: true)        }
+    
+    func presentIBANListDetailView(user: User) {
+        guard let viewController = holder.viewController else { return }
+        let view = IBANListDetailView(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
         viewController.navigationController?.pushViewController(view.viewController, animated: true)
     }
     
-    func navigateToIbanList(user: RegUser) {
-            guard let viewController = holder.viewController else { return }
-            let view = IBANListViewController(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
-            viewController.navigationController?.pushViewController(view.viewController, animated: true)
-        }
-        
-        
+    func presentAddIBAN() {
+        guard let viewController = holder.viewController else { return }
+        let view = AddIBAN(holder: NavigationStackHolder())
+        viewController.present(view.viewController, animated: true)
+    }
+    
+    func navigateToRegistration() {
+        guard let viewController = holder.viewController else { return }
+        let view = RegistrationView(holder: NavigationStackHolder())
+        viewController.navigationController?.pushViewController(view.viewController, animated: true)
+    }
+    
+    func navigateToIbanList(user: User) {
+        guard let viewController = holder.viewController else { return }
+        let view = IBANListViewController(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
+        viewController.navigationController?.pushViewController(view.viewController, animated: true)
+    }
 }
 

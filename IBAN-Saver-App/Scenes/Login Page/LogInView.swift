@@ -23,7 +23,7 @@ struct LogInView: ViewControllable {
     var body: some View {
         ZStack {
             CustomBackground()
-            LogInContentView(emailInput: $emailInput, passwordInput: $passwordInput, viewModel: viewModel, navigationCoordinator: navigationCoordinator, user: viewModel.user)
+            LogInContentView(emailInput: $emailInput, passwordInput: $passwordInput, viewModel: viewModel, navigationCoordinator: navigationCoordinator)
         }
     }
 }
@@ -34,7 +34,6 @@ private struct LogInContentView: View {
     @Binding var passwordInput: String
     var viewModel: LoginViewModel
     let navigationCoordinator: NavigationCoordinator
-    var user : RegUser
 
     var body: some View {
         VStack {
@@ -45,7 +44,7 @@ private struct LogInContentView: View {
             } .padding(.horizontal, 24)
             Spacer()
             RegisterButton(navigationCoordinator: navigationCoordinator)
-            SignInButton(viewModel: viewModel, navigationCoordinator: navigationCoordinator, emailInput: emailInput, passwordInput: passwordInput, user: user)
+            SignInButton(viewModel: viewModel, navigationCoordinator: navigationCoordinator, emailInput: emailInput, passwordInput: passwordInput)
         }
     }
 }
@@ -118,21 +117,22 @@ private struct SignInButton: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     
-    var user : RegUser
-    
     
     var body: some View {
         Button("Sign In") {
-            viewModel.login(email: emailInput, password: passwordInput) { error in
-                if let error = error {
-                    alertTitle = "Error"
-                    alertMessage = "Incorrect email or password. Please try again."
-                    showAlert = true
-                } else {
-                    print("Login successful")
-                    navigationCoordinator.navigateToIbanList(user: user)
-                }
+            viewModel.login(email: emailInput, password: passwordInput) { user in
+                navigationCoordinator.navigateToIbanList(user: user)
             }
+            
+            //                if let error {
+            //                    alertTitle = "Error"
+            //                    alertMessage = "Incorrect email or password. Please try again."
+            //                    showAlert = true
+            //                } else {
+            //
+            //
+            //                }
+            //            }
         }
         .primaryButton
         .padding(.bottom, 80)
