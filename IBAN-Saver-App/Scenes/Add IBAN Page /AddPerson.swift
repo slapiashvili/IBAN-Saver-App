@@ -16,21 +16,23 @@ import SwiftUI
 struct AddPerson: ViewControllable {
     
     var holder: NavigationStackHolder
-    let navigationCoordinator: NavigationCoordinator
-    
-    init(holder: NavigationStackHolder) {
-        self.holder = holder
-        self.navigationCoordinator = NavigationCoordinator(holder: holder)
-    }
-    
-    @State private var successMessage: String? = nil
-    
-    
-    
-    @State private var name = ""
-    @State private var surname = ""
-    @State private var ibanNumber = ""
-    @State private var bankName = ""
+        let navigationCoordinator: NavigationCoordinator
+        
+        init(holder: NavigationStackHolder) {
+            self.holder = holder
+            self.navigationCoordinator = NavigationCoordinator(holder: holder)
+        }
+        
+        @State private var successMessage: String? = nil
+        
+    @ObservedObject private var viewModel = ContactViewModel.shared
+        
+        @State private var name = ""
+        @State private var surname = ""
+        @State private var ibanNumber = ""
+        @State private var bankName = ""
+        @State private var ibans: [Iban] = []
+
     
     var body: some View {
         ZStack{
@@ -50,6 +52,7 @@ struct AddPerson: ViewControllable {
                 Button(action: {
                     Task.detached {
                         await addPerson()
+                        await holder.viewController?.dismiss(animated: true)
                     }
                 }) {
                     Text("Add Person")
@@ -73,22 +76,46 @@ struct AddPerson: ViewControllable {
     }
     
     func addPerson() async {
-        do {
-            
-            successMessage = "You have successfully added a new person's information to the database"
-            name = ""
-            surname = ""
-            ibanNumber = ""
-            bankName = ""
-            
-            try await Task.sleep(nanoseconds: 1_000_000_000)
-            
-            successMessage = "Would you like to add another?"
-        } catch {
-            print("Error: \(error)")
-            successMessage = "An error occurred while adding a person."
+            do {
+                // Store the current count of contacts before adding a new one
+                let initialContactCount = viewModel.contacts.count
+                
+                // Create an array of Iban objects
+                let ibansArray = ibans.isEmpty ? [] : [Iban(ibanNumber: ibanNumber, bankName: bankName)]
+                
+                // Call the addContact method from the view model
+                viewModel.addContact(name: name, surname: surname, ibans: ibansArray)
+                
+                // Check if the count of contacts increased
+                let contactAdded = viewModel.contacts.count > initialContactCount
+                
+                if contactAdded {
+                    successMessage = "You have successfully added \(name) \(surname) to the contacts"
+                } else {
+                    successMessage = "An error occurred while adding a person."
+                }
+                
+                try await Task.sleep(nanoseconds: 1_000_000_000)
+                
+                successMessage = "Would you like to add another?"
+            } catch {
+                print("Error: \(error)")
+                successMessage = "An error occurred while adding a person."
+            }
         }
-    }
-
 }
+
+public class ContactViewModel: ObservableObject {
+    @Published var contacts: [Contact] = []
+    static var shared = ContactViewModel.init()
+    
+    private init(){}
+    
+    func addContact(name: String, surname: String, ibans: [Iban]) {
+        let newContact = Contact(name: name, surname: surname, ibans: ibans)
+        contacts.append(newContact)
+        print("Contact added:", newContact)
+    }
+}
+
 

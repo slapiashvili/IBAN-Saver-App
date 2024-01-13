@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39413F112B4ECA9F007262C0 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39413F102B4ECA9F007262C0 /* ListRowView.swift */; };
 		39413F152B4ED654007262C0 /* IBANListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39413F142B4ED654007262C0 /* IBANListViewModel.swift */; };
+		397361E92B52EDBB00C03637 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 397361E82B52EDBB00C03637 /* GoogleService-Info.plist */; };
 		39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC12B4EDCB2004D7923 /* IBANListDetailView.swift */; };
 		39797EC42B4EDCD6004D7923 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC32B4EDCD6004D7923 /* DetailView.swift */; };
 		39797EC62B4EDE97004D7923 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39797EC52B4EDE97004D7923 /* ButtonComponent.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		39413F102B4ECA9F007262C0 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		39413F142B4ED654007262C0 /* IBANListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListViewModel.swift; sourceTree = "<group>"; };
+		397361E82B52EDBB00C03637 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39797EC12B4EDCB2004D7923 /* IBANListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBANListDetailView.swift; sourceTree = "<group>"; };
 		39797EC32B4EDCD6004D7923 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		39797EC52B4EDE97004D7923 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				3C1290C72B4F6CBF0092F642 /* Extensions */,
 				3C328ABA2B4E91DA000970CA /* LaunchScreen.storyboard */,
 				A97D7C292B52F8B90015B114 /* GoogleService-Info.plist */,
+				397361E82B52EDBB00C03637 /* GoogleService-Info.plist */,
 				3C328ABD2B4E91DA000970CA /* Info.plist */,
 				3C328AB82B4E91DA000970CA /* Assets.xcassets */,
 			);
@@ -386,6 +389,7 @@
 				3C328ABC2B4E91DA000970CA /* LaunchScreen.storyboard in Resources */,
 				A97D7C2A2B52F8B90015B114 /* GoogleService-Info.plist in Resources */,
 				3C328AB92B4E91DA000970CA /* Assets.xcassets in Resources */,
+				397361E92B52EDBB00C03637 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

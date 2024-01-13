@@ -20,9 +20,10 @@ class NavigationCoordinator {
         let view = AddPerson(holder: NavigationStackHolder())
         viewController.present(view.viewController, animated: true)        }
     
-    func presentIBANListDetailView(user: User) {
+    func presentIBANListDetailView(iban: [Iban]) {
         guard let viewController = holder.viewController else { return }
-        let view = IBANListDetailView(holder: NavigationStackHolder(), navigationCoordinator: self, user: user)
+        
+        let view = IBANListDetailView(holder: NavigationStackHolder(), navigationCoordinator: self, selectedContact: iban)
         viewController.navigationController?.pushViewController(view.viewController, animated: true)
     }
     
