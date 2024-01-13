@@ -6,31 +6,31 @@
 //
 import SwiftUI
 
-struct OnboardingView: View {
-    @ObservedObject var viewModel: OnboardingViewModel
-    
-    var body: some View {
-        ZStack {
-            CustomBackground()
-            VStack {
-                if !viewModel.showMainView {
-                    
-                    ButtonView(viewModel: viewModel)
-                    
-                        .padding(.top, 60)
-                    
-                    CardView(viewModel: viewModel)
-                }
-                Spacer()
-            }
-            
-            if viewModel.showMainView {
-                LogInView()
-                    .transition(.opacity)
-            }
-        }
-    }
-}
+//struct OnboardingView: View {
+//    @ObservedObject var viewModel: OnboardingViewModel
+//    
+//    var body: some View {
+//        ZStack {
+//            CustomBackground()
+//            VStack {
+//                if !viewModel.showMainView {
+//                    
+//                    ButtonView(viewModel: viewModel)
+//                    
+//                        .padding(.top, 60)
+//                    
+//                    CardView(viewModel: viewModel)
+//                }
+//                Spacer()
+//            }
+//            
+//            if viewModel.showMainView {
+//                LogInView()
+//                    .transition(.opacity)
+//            }
+//        }
+//    }
+//}
 
 
 struct ButtonView: View {
@@ -151,9 +151,3 @@ struct NextButton: View {
 }
 
 
-//MARK: - Preview
-struct OnboardingViewPreviews: PreviewProvider {
-    static var previews: some View {
-        OnboardingView(viewModel: OnboardingViewModel())
-    }
-}

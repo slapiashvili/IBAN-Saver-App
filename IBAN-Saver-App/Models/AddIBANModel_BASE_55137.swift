@@ -7,14 +7,16 @@
 
 import Foundation
 
-final class RegUser {
+final class User {
     var email: String
-    var username: String
+    var password: String
     var ibans: [IBANStruct]
     
-    init(name: String, username: String, ibans: [IBANStruct] = []) {
+    static var current: User?
+    
+    init(name: String, password: String, ibans: [IBANStruct] = []) {
         self.email = name
-        self.username = username
+        self.password = password
         self.ibans = ibans
     }
 }

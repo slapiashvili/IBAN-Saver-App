@@ -22,4 +22,8 @@ extension UIColor {
         return UIColor(Color.ibanHeader)
     }
     
+    static var IBANText: UIColor {
+        return UIColor(Color.ibanText)
+    }
+    
 }

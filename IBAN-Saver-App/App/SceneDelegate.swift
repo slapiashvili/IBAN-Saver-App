@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -15,11 +14,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let someScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: someScene)
 
-        let registrationViewController = RegistrationViewController()
-        let navigationController = UINavigationController(rootViewController: registrationViewController)
+        let view = LogInView(holder: NavigationStackHolder())
 
-        window?.rootViewController = navigationController
+        window?.rootViewController = UINavigationController(rootViewController: view.viewController)
         window?.makeKeyAndVisible()
     }
 }
+
 

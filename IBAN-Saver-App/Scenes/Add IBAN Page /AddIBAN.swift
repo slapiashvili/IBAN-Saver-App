@@ -10,39 +10,52 @@ import SwiftUI
 struct AddIBAN: ViewControllable {
     
     var holder: NavigationStackHolder
-
+    let navigationCoordinator: NavigationCoordinator
+    
+    init(holder: NavigationStackHolder) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+    }
+    
     @State private var successMessage: String? = nil
     @State private var ibanNumber = ""
     @State private var bankName = ""
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Please fill in the following information")
-                .font(.title)
-            
-            TextField("IBAN Number", text: $ibanNumber)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            
-            TextField("Bank Name", text: $bankName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            
-            Button(action: {
-                Task.detached {
-                    await addIBAN()
+        ZStack {
+            CustomBackground()
+            VStack(spacing: 20) {
+                Text("Please fill in the following information")
+                    .modifier(TextModifier.header)
+                
+                CustomTextFieldView(text: $ibanNumber, placeholder: "IBAN Number", isSecure: false)
+                
+                CustomTextFieldView(text: $bankName, placeholder: "Bank Name", isSecure: false)
+                
+                
+                Button(action: {
+                    Task.detached {
+                        await addIBAN()
+                    }
+                }) {
+                    Text("Add IBAN")
+                        .frame(height: 44)
+                        .frame(maxWidth: .infinity)
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundColor(.ibanText)
+                        .background(.ibanButton)
+                        .cornerRadius(8)
+                        .padding(.bottom, 80)
                 }
-            }) {
-                Text("Add IBAN")
+                
+                if let message = successMessage {
+                    Text(message)
+                        .foregroundColor(.green)
+                        .padding()
+                }
             }
-            
-            if let message = successMessage {
-                Text(message)
-                    .foregroundColor(.green)
-                    .padding()
-            }
+            .padding()
         }
-        .padding()
     }
     
     func addIBAN() async {

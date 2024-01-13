@@ -21,13 +21,13 @@ struct PasswordCriteriaView: View {
             
             Text(text)
                 .foregroundColor(.secondary)
+            
+            Spacer()
         }
-        .font(.title3)
+        .frame(maxWidth: .infinity)
+        .font(.title2)
     }
     
 }
 
 
-#Preview {
-    PasswordCriteriaView(text: "asd1")
-}

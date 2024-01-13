@@ -14,53 +14,82 @@ struct IBANListViewController: ViewControllable {
     
     //MARK: - Properties
     @StateObject var viewModel: IBANListViewModel = .init()
-    var retriveUser: String
+    @State var retriveUser: String
+    @State private var isShowingDetails = false
+    @State private var selectedUser: RegUser
     
-    //MARK: - Body
+    
+    init(holder: NavigationStackHolder, navigationCoordinator: NavigationCoordinator, user: RegUser) {
+        self.holder = holder
+        self.navigationCoordinator = NavigationCoordinator(holder: holder)
+        self.selectedUser = user
+    }
+    
+    
     var body: some View {
-        ZStack {
-            VStack(spacing: 55) {
-                Spacer()
-                listTitleView
-                listView
-                ButtonComponent(buttonTitle: "Add Person", action: {
-                    navigationCoordinator.navigateToAddPerson()
-                })
-                Spacer()
+        VStack {
+            listTitleView
+            ScrollView {
+//                ForEach(viewModel, id: \.id) { user in
+//                    ListRowView(user: user)
+//                        .onTapGesture {
+//                            navigationCoordinator.presentIBANListDetailView(user: user)
+//                        }
+//                }
+                //                   ForEach(viewModel.users, id: \.id) { user in
+                //                       ListRowView(user: user)
+                //                           .onTapGesture {
+                //                               navigationCoordinator.presentIBANListDetailView(user: user)
+                //                           }
+                //                   }
+                Text(selectedUser.username)
             }
-            CustomBackground()
+            addPersonButton
         }
     }
     
-    //MARK: - Views
+    
+    
     private var listView: some View {
+        
         List{
-            ForEach(viewModel.addedusers, id: \.id) { addeduser in
-                ListRowView(user: addeduser)
-            }
+            //            ForEach(viewModel.users, id: \.id) { user in
+            //                ListRowView(user: user)
+            //                    .onTapGesture {
+            //                        selectedUser = user
+            //                        isShowingDetails = true
+            //
+            //                    }
+            //            }
+            
         }
+    }
+    //    private var listView: some View {
+    //
+    //        List{
+    //            ForEach(viewModel.users, id: \.id) { user in
+    //                ListRowView(user: user)
+    //                    .onTapGesture {
+    //                        selectedUser = user
+    //                        isShowingDetails = true
+    //
+    //                    }
+    //            }
+    //
+    //        }
+    //    }
+    
+    private var listTitleView: some View {
+        Text("IBAN List View")
         
     }
     
-    private var textView: some View {
-        Text(retriveUser)
-            .font(.title3)
-            .bold()
-            .lineLimit(1)
-            .padding(.horizontal, 20)
+    private var addPersonButton: some View {
+        Button("Add Person") {
+            //                navigationCoordinator.presentAddPersonView()
+        }
+        .padding()
     }
-    
-    private var listTitleView: some View {
-        Text("Hello \(retriveUser)")
-            .font(.title)
-            .bold()
-            .foregroundStyle(.orange)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
-    }
-    
     
 }
 
-
-//#Preview {IBANListViewController( retriveUser: "John") }

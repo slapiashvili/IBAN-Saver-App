@@ -10,7 +10,7 @@ import SwiftUI
 struct ListRowView: View {
     
     //MARK: Properties
-    var user: User
+    var user: RegUser
     
     //MARK: Body
     var body: some View {
@@ -27,6 +27,3 @@ struct ListRowView: View {
     }
 }
 
-#Preview {
-    ListRowView(user: User(username: "Mariam Joglidze", ibans: ["1","2"]))
-}
