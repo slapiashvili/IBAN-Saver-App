@@ -48,7 +48,6 @@
 		A9974C782B506E3E006DAC5D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C772B506E3E006DAC5D /* OnboardingView.swift */; };
 		A9974C9A2B508602006DAC5D /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C992B508602006DAC5D /* OnboardingModel.swift */; };
 		A9974C9C2B508625006DAC5D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9974C9B2B508625006DAC5D /* OnboardingViewModel.swift */; };
-		A9BFAFD92B5257E400F6CFC8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAFD82B5257E400F6CFC8 /* Alert.swift */; };
 		A9BFAFDB2B52581700F6CFC8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAFDA2B52581700F6CFC8 /* LoginViewModel.swift */; };
 		A9BFAFEA2B52ECC600F6CFC8 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAFE92B52ECC600F6CFC8 /* SignInButton.swift */; };
 		A9BFAFEC2B52ECF600F6CFC8 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAFEB2B52ECF600F6CFC8 /* RegisterButton.swift */; };
@@ -93,7 +92,6 @@
 		A9974C772B506E3E006DAC5D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A9974C992B508602006DAC5D /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		A9974C9B2B508625006DAC5D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		A9BFAFD82B5257E400F6CFC8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A9BFAFDA2B52581700F6CFC8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A9BFAFE92B52ECC600F6CFC8 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		A9BFAFEB2B52ECF600F6CFC8 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 			children = (
 				A9974C712B50069D006DAC5D /* Text.swift */,
 				3C1290C52B4F6C9E0092F642 /* Button.swift */,
-				A9BFAFD82B5257E400F6CFC8 /* Alert.swift */,
 				3C1290C82B4F6CD40092F642 /* ColorPalette.swift */,
 			);
 			path = Extensions;
@@ -423,7 +420,6 @@
 				39797EC22B4EDCB2004D7923 /* IBANListDetailView.swift in Sources */,
 				A9974C782B506E3E006DAC5D /* OnboardingView.swift in Sources */,
 				5DB701712B5127BF0054ADBD /* PasswordCriteriaView.swift in Sources */,
-				A9BFAFD92B5257E400F6CFC8 /* Alert.swift in Sources */,
 				A9974C762B50071C006DAC5D /* CustomBackground.swift in Sources */,
 				5D35C5C72B51C6E5003AFE17 /* ApiManagerr.swift in Sources */,
 				3C328AB02B4E91D9000970CA /* AppDelegate.swift in Sources */,

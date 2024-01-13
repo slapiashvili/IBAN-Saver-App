@@ -61,8 +61,6 @@ struct LogInContentView: View {
                     CustomTextFieldView(text: $emailInput, placeholder: "Email or Username", isSecure: false)
                     CustomTextFieldView(text: $passwordInput, placeholder: "Password", isSecure: true)
                 }
-                Text("Forgot Password?")
-                    .primaryTextStyle
             }
         }
     }
